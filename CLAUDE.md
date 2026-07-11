@@ -10,6 +10,8 @@ Indonesian home cooks — typically a mom on a phone. It recommends **balanced s
 (nasi + lauk + sayur + pelengkap), not loose recipes. It is not a food diary or calorie
 counter. **Zero required input**: it works on first open with a default 1-person family.
 
+**Live**: <https://makanapaya.vercel.app> — deployed on Vercel.
+
 ## Run / build / verify
 
 ```bash
