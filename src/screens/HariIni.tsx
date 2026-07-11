@@ -1,26 +1,43 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { generateDay, rerollSlot, type Chip, type DaySet } from "../engine";
+import { generateDay, rerollSlot, type Chip as ChipType, type DaySet } from "../engine";
 import { useStore } from "../lib/store";
 import { CHIP_LABEL } from "../lib/format";
 import { DaySetCard } from "../components/DaySetCard";
-import { GhostButton, PrimaryButton, Stepper } from "../components/ui";
+import { Chip, PrimaryButton, Stepper } from "../components/ui";
+import { ShuffleIcon } from "../components/icons";
 
-const CHIPS: Chip[] = ["pedas", "berkuah", "seger", "cepet", "ekonomis", "spesial", "santai"];
+const CHIPS: ChipType[] = ["pedas", "berkuah", "seger", "cepet", "ekonomis", "spesial", "santai"];
+
+function greeting(): string {
+  const h = new Date().getHours();
+  if (h < 11) return "Selamat pagi 👋";
+  if (h < 15) return "Selamat siang 👋";
+  if (h < 19) return "Selamat sore 👋";
+  return "Selamat malam 👋";
+}
 
 export default function HariIni() {
   const store = useStore();
   const navigate = useNavigate();
 
-  const [chips, setChips] = useState<Chip[]>([]);
+  const [chips, setChips] = useState<ChipType[]>([]);
   const [dishes, setDishes] = useState<2 | 3 | 4>(store.household.dishesPerMeal);
   const [servings, setServings] = useState(store.household.defaultServings);
   const [salt, setSalt] = useState(0);
   const [day, setDay] = useState<DaySet | null>(null);
+  const [editing, setEditing] = useState(false);
   const rerollCounter = useRef(0);
   const lastRecorded = useRef<string>("");
 
-  const eating = store.household.members;
+  const members = store.household.members;
+  const eating = members.filter((m) => m.eatingToday);
+  const eatingSummary =
+    eating.length > 0
+      ? eating.map((m) => m.name).join(", ")
+      : members.length > 0
+        ? members.map((m) => m.name).join(", ")
+        : "kamu";
 
   const generate = useCallback(
     (nextSalt = salt, nextChips = chips, nextDishes = dishes) => {
@@ -36,6 +53,12 @@ export default function HariIni() {
     [store, chips, dishes, servings, salt]
   );
 
+  // Suggestion-forward: generate an idea on first open (zero required input).
+  useEffect(() => {
+    if (!day) generate();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // Silent suggestion-memory: record whatever set is currently shown.
   useEffect(() => {
     if (!day) return;
@@ -45,15 +68,15 @@ export default function HariIni() {
     store.recordShown(day.items.map((i) => i.menu.id));
   }, [day, store]);
 
-  const toggleChip = (chip: Chip) => {
+  const toggleChip = (chip: ChipType) => {
     const next = chips.includes(chip) ? chips.filter((c) => c !== chip) : [...chips, chip];
     setChips(next);
-    if (day) generate(salt, next, dishes);
+    generate(salt, next, dishes);
   };
 
   const setDishCount = (n: 2 | 3 | 4) => {
     setDishes(n);
-    if (day) generate(salt, chips, n);
+    generate(salt, chips, n);
   };
 
   const rerollAll = () => {
@@ -74,90 +97,119 @@ export default function HariIni() {
 
   const toggleEating = (name: string, current: boolean) => {
     store.setEatingToday(name, !current);
-    if (day) generate();
+    generate();
   };
 
   return (
-    <div className="px-4 pt-4">
-      <header className="mb-1">
-        <h1 className="text-2xl font-extrabold text-warm-800">Masak apa hari ini?</h1>
-        <p className="text-sm text-stone-500">
-          Biar nggak bingung, biar nggak itu-itu lagi. Klik tombolnya. 🍳
-        </p>
-      </header>
+    <div className="px-5 pt-5">
+      <div className="text-[13px] font-semibold tracking-[0.02em] text-primary">
+        {greeting()}
+      </div>
+      <h1 className="mt-0.5 text-[28px] font-extrabold leading-[34px] tracking-[-0.02em] text-ink">
+        Masak apa
+        <br />
+        hari ini?
+      </h1>
 
-      {/* Preference chips */}
+      {/* Mood chips */}
       <div className="mt-4 flex flex-wrap gap-2">
         {CHIPS.map((chip) => (
-          <GhostButton key={chip} active={chips.includes(chip)} onClick={() => toggleChip(chip)}>
+          <Chip key={chip} active={chips.includes(chip)} onClick={() => toggleChip(chip)}>
             {CHIP_LABEL[chip]}
-          </GhostButton>
+          </Chip>
         ))}
       </div>
 
-      {/* Who's eating */}
-      {eating.length > 0 && (
-        <div className="mt-3">
-          <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-warm-600">
-            Siapa makan hari ini?
+      {/* Context summary + inline edit */}
+      <div className="mt-3.5 rounded-[20px] border border-border bg-surface">
+        <div className="flex items-center justify-between gap-3 px-4 py-3.5">
+          <div className="flex min-w-0 flex-col gap-0.5">
+            <span className="text-xs font-bold uppercase tracking-[0.06em] text-faint">
+              Hari ini
+            </span>
+            <span className="truncate text-[14.5px] font-semibold text-ink">
+              {servings} porsi · {dishes} lauk · {eatingSummary}
+            </span>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {eating.map((m) => (
-              <GhostButton
-                key={m.name}
-                active={m.eatingToday}
-                onClick={() => toggleEating(m.name, m.eatingToday)}
-              >
-                {m.eatingToday ? "✅ " : ""}
-                {m.name}
-              </GhostButton>
-            ))}
-          </div>
+          <button
+            type="button"
+            onClick={() => setEditing((v) => !v)}
+            className="shrink-0 rounded-full bg-thumb px-3.5 py-2 text-[13px] font-bold text-ink-2 active:scale-95"
+          >
+            {editing ? "Tutup" : "Ubah"}
+          </button>
         </div>
-      )}
 
-      {/* Steppers */}
-      <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2">
-        <Stepper label="Porsi" value={servings} min={1} max={12} onChange={setServings} />
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-stone-600">Jumlah lauk</span>
-          {[2, 3, 4].map((n) => (
-            <GhostButton key={n} active={dishes === n} onClick={() => setDishCount(n as 2 | 3 | 4)}>
-              {n}
-            </GhostButton>
-          ))}
-        </div>
+        {editing && (
+          <div className="space-y-3.5 border-t border-divider px-4 py-3.5">
+            <div className="flex items-center justify-between">
+              <span className="text-[13px] font-semibold text-ink-2">Porsi</span>
+              <Stepper value={servings} min={1} max={12} onChange={setServings} />
+            </div>
+            <div>
+              <div className="mb-1.5 text-[13px] font-semibold text-ink-2">Jumlah lauk</div>
+              <div className="flex gap-2">
+                {[2, 3, 4].map((n) => (
+                  <Chip
+                    key={n}
+                    active={dishes === n}
+                    onClick={() => setDishCount(n as 2 | 3 | 4)}
+                  >
+                    {n}
+                  </Chip>
+                ))}
+              </div>
+            </div>
+            {members.length > 0 && (
+              <div>
+                <div className="mb-1.5 text-[13px] font-semibold text-ink-2">
+                  Siapa makan hari ini?
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {members.map((m) => (
+                    <Chip
+                      key={m.name}
+                      active={m.eatingToday}
+                      onClick={() => toggleEating(m.name, m.eatingToday)}
+                    >
+                      {m.eatingToday ? "✅ " : ""}
+                      {m.name}
+                    </Chip>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
-      {/* Main action */}
-      <PrimaryButton className="mt-5 w-full text-lg" onClick={() => generate(salt)}>
-        {day ? "🍽️ Kasih ide lain" : "🍽️ Masak apa hari ini?"}
-      </PrimaryButton>
+      {/* Suggestion */}
+      <div className="mt-6 flex items-baseline justify-between">
+        <span className="text-base font-extrabold text-ink">Usulan hari ini</span>
+        <button
+          type="button"
+          onClick={rerollAll}
+          className="inline-flex items-center gap-1.5 text-[13px] font-bold text-primary active:scale-95"
+        >
+          <ShuffleIcon size={14} />
+          <span>Ganti semua</span>
+        </button>
+      </div>
 
-      {/* Result */}
-      {day ? (
-        <div className="mt-4">
-          <div className="mb-2 flex items-center justify-between">
-            <span className="text-sm font-semibold text-stone-500">Usulan menu</span>
-            <button
-              type="button"
-              onClick={rerollAll}
-              className="rounded-full bg-warm-100 px-3 py-1.5 text-xs font-semibold text-warm-700 active:scale-95"
-            >
-              🔀 Ganti semua
-            </button>
-          </div>
-          <DaySetCard day={day} onReroll={rerollItem} onOpenMenu={(id) => navigate(`/menu/${id}`)} />
-        </div>
-      ) : (
-        <div className="mt-6 rounded-2xl bg-warm-50 px-6 py-10 text-center text-stone-500">
-          <div className="text-4xl">🤔</div>
-          <p className="mt-2 text-sm">
-            Tekan tombol di atas, nanti kami usulkan satu set menu seimbang: lauk, sayur, dan
-            teman-temannya.
-          </p>
+      {day && (
+        <div className="mt-2.5">
+          <DaySetCard
+            day={day}
+            variant="today"
+            onReroll={rerollItem}
+            onOpenMenu={(id) => navigate(`/menu/${id}`)}
+          />
         </div>
       )}
+
+      <PrimaryButton className="mt-4 w-full text-[16.5px]" onClick={rerollAll}>
+        Kasih ide lain 🍳
+      </PrimaryButton>
     </div>
   );
 }

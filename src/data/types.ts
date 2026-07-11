@@ -54,6 +54,7 @@ export type Ingredient = {
 export type Menu = {
   id: string;
   name: string;
+  photo?: string; // optional real photo URL; falls back to a striped placeholder
   category: MenuCategory;
   cuisine: Cuisine;
   protein: Protein;

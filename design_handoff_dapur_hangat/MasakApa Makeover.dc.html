@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f0eee9;font-family:system-ui,sans-serif}
+a{color:#b45309}a:hover{color:#92400e}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t2" data-screen-label="Turn 2 — Dapur Hangat, all screens">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Dapur Hangat (<a class="dv-oid" href="#1a">1a</a>) applied to the other 5 screens</span></div>
+<div class="dv-opts">
+
+<!-- ============ 2a MINGGU INI ============ -->
+<div class="dv-opt" id="2a" data-screen-label="2a Minggu Ini — Dapur Hangat">
+<div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Minggu Ini</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#faf3e7;position:relative;font-family:'Plus Jakarta Sans','Inter',system-ui,sans-serif;color:#33251a;padding:20px 20px 110px">
+  <div style="font-size:13px;font-weight:600;color:#b8502e;letter-spacing:.02em">Senin–Jumat 🗓</div>
+  <h1 style="margin:2px 0 0;font-size:28px;line-height:34px;font-weight:800;letter-spacing:-.02em">Masak apa<br>minggu ini?</h1>
+  <p style="margin:8px 0 0;font-size:13.5px;line-height:1.5;color:#8a6d4c">Protein diputar biar nggak bosan, bahan segar dipakai lintas hari biar hemat.</p>
+  <div style="margin-top:14px;display:flex;gap:10px">
+    <div style="flex:1;border-radius:9999px;background:#b8502e;box-shadow:0 6px 16px rgba(184,80,46,.3);padding:14px 0;text-align:center;font-weight:800;font-size:15px;color:#fff8ef;display:flex;align-items:center;justify-content:center;gap:7px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff8ef" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12 a8.5 8.5 0 1 1-2.6-6.1"></path><path d="M20.5 3.5 v4.5 h-4.5"></path></svg><span>Susun ulang</span></div>
+    <div style="flex:1;border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;padding:14px 0;text-align:center;font-weight:800;font-size:15px;color:#6b4c33;display:flex;align-items:center;justify-content:center;gap:7px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"></circle><circle cx="17" cy="20" r="1.4"></circle><path d="M3 4 h2.5 l2.2 11 h10.5 l2-8 H6"></path></svg><span>Belanja</span></div>
+  </div>
+  <div style="margin-top:20px;display:flex;flex-direction:column;gap:14px">
+    <div style="border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 2px 8px rgba(139,90,43,.06);overflow:hidden">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#f9efdd">
+        <span style="font-size:15px;font-weight:800;color:#7a3c1e">Senin</span>
+        <div style="display:flex;gap:6px">
+          <span style="border-radius:9999px;background:#b8502e;color:#fff8ef;padding:5px 11px;font-size:11.5px;font-weight:700;display:inline-flex;align-items:center;gap:5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff8ef" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="11" width="12" height="9" rx="2"></rect><path d="M9 11 V8 a3 3 0 0 1 6 0 v3"></path></svg><span>Terkunci</span></span>
+          <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:5px 11px;font-size:11.5px;font-weight:700;display:inline-flex;align-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7 h3.5 L17 17 h4"></path><path d="M18.5 14.5 L21 17 l-2.5 2.5"></path><path d="M3 17 h3.5 l3-3.4"></path><path d="M14.2 10.6 L17 7 h4"></path><path d="M18.5 4.5 L21 7 l-2.5 2.5"></path></svg></span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:13px 16px">
+        <div style="height:48px;width:48px;flex:none;border-radius:14px;background:repeating-linear-gradient(45deg,#f3e5cd,#f3e5cd 6px,#eeddc0 6px,#eeddc0 12px);display:flex;align-items:center;justify-content:center;font:600 8px ui-monospace,monospace;color:#a3814f;text-align:center">foto</div>
+        <div style="min-width:0;flex:1">
+          <div style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#b8502e">Lauk</div>
+          <div style="font-size:15px;font-weight:700">Ayam Goreng Bumbu Kuning</div>
+          <div style="margin-top:1px;font-size:12px;color:#9c7c56">45 menit</div>
+        </div>
+        <span style="flex:none;height:34px;width:34px;border-radius:9999px;background:#f3e5cd;display:flex;align-items:center;justify-content:center;font-size:14px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12 a8.5 8.5 0 1 1-2.6-6.1"></path><path d="M20.5 3.5 v4.5 h-4.5"></path></svg></span>
+      </div>
+      <div style="border-top:1px solid #f5ead6;display:flex;align-items:center;gap:14px;padding:13px 16px">
+        <div style="height:48px;width:48px;flex:none;border-radius:14px;background:repeating-linear-gradient(45deg,#e5eedd,#e5eedd 6px,#dde8d2 6px,#dde8d2 12px);display:flex;align-items:center;justify-content:center;font:600 8px ui-monospace,monospace;color:#75885f;text-align:center">foto</div>
+        <div style="min-width:0;flex:1">
+          <div style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#5c7d4a">Sayur</div>
+          <div style="font-size:15px;font-weight:700">Sayur Bening Bayam</div>
+          <div style="margin-top:1px;font-size:12px;color:#9c7c56">20 menit · cepat</div>
+        </div>
+        <span style="flex:none;height:34px;width:34px;border-radius:9999px;background:#f3e5cd;display:flex;align-items:center;justify-content:center;font-size:14px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12 a8.5 8.5 0 1 1-2.6-6.1"></path><path d="M20.5 3.5 v4.5 h-4.5"></path></svg></span>
+      </div>
+      <div style="border-top:1px solid #f5ead6;padding:11px 16px;display:flex;gap:8px">
+        <span style="border-radius:9999px;background:#f9efdd;padding:4px 10px;font-size:11px;font-weight:600;color:#6b4c33">⏱️ 65 mnt</span>
+        <span style="border-radius:9999px;background:#f9efdd;padding:4px 10px;font-size:11px;font-weight:600;color:#6b4c33">💰 Sedang</span>
+        <span style="border-radius:9999px;background:#f9efdd;padding:4px 10px;font-size:11px;font-weight:600;color:#6b4c33">± 540 kkal</span>
+      </div>
+    </div>
+    <div style="border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 2px 8px rgba(139,90,43,.06);overflow:hidden">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#f9efdd">
+        <span style="font-size:15px;font-weight:800;color:#7a3c1e">Selasa</span>
+        <div style="display:flex;gap:6px">
+          <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:5px 11px;font-size:11.5px;font-weight:700;display:inline-flex;align-items:center;gap:5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="11" width="12" height="9" rx="2"></rect><path d="M9 11 V8 a3 3 0 0 1 5.8-1"></path></svg><span>Kunci</span></span>
+          <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:5px 11px;font-size:11.5px;font-weight:700;display:inline-flex;align-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7 h3.5 L17 17 h4"></path><path d="M18.5 14.5 L21 17 l-2.5 2.5"></path><path d="M3 17 h3.5 l3-3.4"></path><path d="M14.2 10.6 L17 7 h4"></path><path d="M18.5 4.5 L21 7 l-2.5 2.5"></path></svg></span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:13px 16px">
+        <div style="height:48px;width:48px;flex:none;border-radius:14px;background:repeating-linear-gradient(45deg,#f3e5cd,#f3e5cd 6px,#eeddc0 6px,#eeddc0 12px);display:flex;align-items:center;justify-content:center;font:600 8px ui-monospace,monospace;color:#a3814f;text-align:center">foto</div>
+        <div style="min-width:0;flex:1">
+          <div style="display:flex;align-items:center;gap:6px"><span style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#b8502e">Lauk</span><span style="border-radius:9999px;background:#fbe3dc;color:#a63d20;padding:1px 8px;font-size:10.5px;font-weight:700">pedas</span></div>
+          <div style="font-size:15px;font-weight:700">Ikan Kembung Balado</div>
+          <div style="margin-top:1px;font-size:12px;color:#9c7c56">35 menit</div>
+        </div>
+        <span style="flex:none;height:34px;width:34px;border-radius:9999px;background:#f3e5cd;display:flex;align-items:center;justify-content:center;font-size:14px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12 a8.5 8.5 0 1 1-2.6-6.1"></path><path d="M20.5 3.5 v4.5 h-4.5"></path></svg></span>
+      </div>
+      <div style="border-top:1px solid #f5ead6;display:flex;align-items:center;gap:14px;padding:13px 16px">
+        <div style="height:48px;width:48px;flex:none;border-radius:14px;background:repeating-linear-gradient(45deg,#e5eedd,#e5eedd 6px,#dde8d2 6px,#dde8d2 12px);display:flex;align-items:center;justify-content:center;font:600 8px ui-monospace,monospace;color:#75885f;text-align:center">foto</div>
+        <div style="min-width:0;flex:1">
+          <div style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#5c7d4a">Sayur</div>
+          <div style="font-size:15px;font-weight:700">Sayur Asem</div>
+          <div style="margin-top:1px;font-size:12px;color:#9c7c56">30 menit</div>
+        </div>
+        <span style="flex:none;height:34px;width:34px;border-radius:9999px;background:#f3e5cd;display:flex;align-items:center;justify-content:center;font-size:14px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12 a8.5 8.5 0 1 1-2.6-6.1"></path><path d="M20.5 3.5 v4.5 h-4.5"></path></svg></span>
+      </div>
+      <div style="border-top:1px solid #f5ead6;padding:11px 16px;display:flex;gap:8px">
+        <span style="border-radius:9999px;background:#f9efdd;padding:4px 10px;font-size:11px;font-weight:600;color:#6b4c33">⏱️ 65 mnt</span>
+        <span style="border-radius:9999px;background:#f9efdd;padding:4px 10px;font-size:11px;font-weight:600;color:#6b4c33">💰 Ekonomis</span>
+        <span style="border-radius:9999px;background:#f9efdd;padding:4px 10px;font-size:11px;font-weight:600;color:#6b4c33">± 480 kkal</span>
+      </div>
+    </div>
+    <div style="border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 2px 8px rgba(139,90,43,.06);overflow:hidden">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#f9efdd">
+        <span style="font-size:15px;font-weight:800;color:#7a3c1e">Rabu</span>
+        <div style="display:flex;gap:6px">
+          <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:5px 11px;font-size:11.5px;font-weight:700;display:inline-flex;align-items:center;gap:5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="11" width="12" height="9" rx="2"></rect><path d="M9 11 V8 a3 3 0 0 1 5.8-1"></path></svg><span>Kunci</span></span>
+          <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:5px 11px;font-size:11.5px;font-weight:700;display:inline-flex;align-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7 h3.5 L17 17 h4"></path><path d="M18.5 14.5 L21 17 l-2.5 2.5"></path><path d="M3 17 h3.5 l3-3.4"></path><path d="M14.2 10.6 L17 7 h4"></path><path d="M18.5 4.5 L21 7 l-2.5 2.5"></path></svg></span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:13px 16px">
+        <div style="height:48px;width:48px;flex:none;border-radius:14px;background:repeating-linear-gradient(45deg,#f3e5cd,#f3e5cd 6px,#eeddc0 6px,#eeddc0 12px);display:flex;align-items:center;justify-content:center;font:600 8px ui-monospace,monospace;color:#a3814f;text-align:center">foto</div>
+        <div style="min-width:0;flex:1">
+          <div style="display:flex;align-items:center;gap:6px"><span style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#b8502e">Lauk</span><span style="border-radius:9999px;background:#f3e5cd;color:#8a6d4c;padding:1px 8px;font-size:10.5px;font-weight:700">santan</span></div>
+          <div style="font-size:15px;font-weight:700">Opor Tahu Telur</div>
+          <div style="margin-top:1px;font-size:12px;color:#9c7c56">40 menit</div>
+        </div>
+        <span style="flex:none;height:34px;width:34px;border-radius:9999px;background:#f3e5cd;display:flex;align-items:center;justify-content:center;font-size:14px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12 a8.5 8.5 0 1 1-2.6-6.1"></path><path d="M20.5 3.5 v4.5 h-4.5"></path></svg></span>
+      </div>
+      <div style="border-top:1px solid #f5ead6;display:flex;align-items:center;gap:14px;padding:13px 16px">
+        <div style="height:48px;width:48px;flex:none;border-radius:14px;background:repeating-linear-gradient(45deg,#e5eedd,#e5eedd 6px,#dde8d2 6px,#dde8d2 12px);display:flex;align-items:center;justify-content:center;font:600 8px ui-monospace,monospace;color:#75885f;text-align:center">foto</div>
+        <div style="min-width:0;flex:1">
+          <div style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#5c7d4a">Sayur</div>
+          <div style="font-size:15px;font-weight:700">Lalapan &amp; Sambal Terasi</div>
+          <div style="margin-top:1px;font-size:12px;color:#9c7c56">15 menit · cepat</div>
+        </div>
+        <span style="flex:none;height:34px;width:34px;border-radius:9999px;background:#f3e5cd;display:flex;align-items:center;justify-content:center;font-size:14px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12 a8.5 8.5 0 1 1-2.6-6.1"></path><path d="M20.5 3.5 v4.5 h-4.5"></path></svg></span>
+      </div>
+      <div style="border-top:1px solid #f5ead6;padding:11px 16px;display:flex;gap:8px">
+        <span style="border-radius:9999px;background:#f9efdd;padding:4px 10px;font-size:11px;font-weight:600;color:#6b4c33">⏱️ 55 mnt</span>
+        <span style="border-radius:9999px;background:#f9efdd;padding:4px 10px;font-size:11px;font-weight:600;color:#6b4c33">💰 Ekonomis</span>
+        <span style="border-radius:9999px;background:#f9efdd;padding:4px 10px;font-size:11px;font-weight:600;color:#6b4c33">± 510 kkal</span>
+      </div>
+    </div>
+  </div>
+  <nav style="position:absolute;left:12px;right:12px;bottom:12px;border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 8px 24px rgba(139,90,43,.12);display:flex;padding:6px 8px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M4 12 h16"></path><path d="M5 12 a7 7 0 0 0 14 0"></path><path d="M9 8 c0-2 6-2 6 0"></path></svg><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;border-radius:18px;background:#f9efdd;font-size:10.5px;font-weight:700;color:#b8502e"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b8502e" stroke-width="2" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M4 10 h16"></path><path d="M9 3 v4 M15 3 v4"></path></svg><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M5 10 h14 l-1.5 9 h-11 z"></path><path d="M9 10 c0-5 6-5 6 0"></path></svg><span>Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M5 5 h13 a1 1 0 0 1 1 1 v13 a1 1 0 0 1-1 1 H5 z"></path><path d="M5 5 v15 M9 5 v15"></path></svg><span>Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="3"></circle><circle cx="16.5" cy="10.5" r="2.2"></circle><path d="M4 20 c0-4 10-4 10 0 M14.5 16.5 c3-1.5 6 .5 6 3.5"></path></svg><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+<!-- ============ 2b DAFTAR BELANJA ============ -->
+<div class="dv-opt" id="2b" data-screen-label="2b Daftar Belanja — Dapur Hangat">
+<div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Daftar Belanja</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#faf3e7;position:relative;font-family:'Plus Jakarta Sans','Inter',system-ui,sans-serif;color:#33251a;padding:20px 20px 110px">
+  <div style="font-size:13px;font-weight:600;color:#b8502e;letter-spacing:.02em">Dari menu minggu ini 🛒</div>
+  <h1 style="margin:2px 0 0;font-size:28px;line-height:34px;font-weight:800;letter-spacing:-.02em">Daftar Belanja</h1>
+  <div style="margin-top:12px;border-radius:20px;background:#fffdf8;border:1px solid #efe0c8;padding:13px 16px;display:flex;align-items:center;gap:12px">
+    <div style="flex:1">
+      <div style="height:8px;border-radius:9999px;background:#f3e5cd;overflow:hidden"><div style="height:100%;width:22%;border-radius:9999px;background:#5c7d4a"></div></div>
+      <div style="margin-top:6px;font-size:12px;font-weight:600;color:#8a6d4c">2 dari 9 item dicoret · untuk 4 porsi</div>
+    </div>
+  </div>
+  <div style="margin-top:18px;display:flex;flex-direction:column;gap:14px">
+    <div>
+      <div style="margin:0 4px 8px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#b8502e">🥬 Sayuran &amp; Bumbu Segar</div>
+      <div style="border-radius:20px;background:#fffdf8;border:1px solid #efe0c8;overflow:hidden">
+        <div style="display:flex;align-items:center;gap:13px;padding:12px 16px">
+          <span style="height:26px;width:26px;flex:none;border-radius:9px;background:#5c7d4a;color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center">✓</span>
+          <div style="min-width:0;flex:1;opacity:.45;text-decoration:line-through"><span style="font-size:14.5px;font-weight:600">kangkung</span><span style="margin-left:8px;font-size:12px;color:#9c7c56">2 ikat</span></div>
+        </div>
+        <div style="border-top:1px solid #f5ead6;display:flex;align-items:center;gap:13px;padding:12px 16px">
+          <span style="height:26px;width:26px;flex:none;border-radius:9px;border:2px solid #dcc79f;display:flex"></span>
+          <div style="min-width:0;flex:1"><span style="font-size:14.5px;font-weight:600">bayam</span><span style="margin-left:8px;font-size:12px;color:#9c7c56">2 ikat</span></div>
+        </div>
+        <div style="border-top:1px solid #f5ead6;display:flex;align-items:center;gap:13px;padding:12px 16px">
+          <span style="height:26px;width:26px;flex:none;border-radius:9px;border:2px solid #dcc79f;display:flex"></span>
+          <div style="min-width:0;flex:1"><span style="font-size:14.5px;font-weight:600">cabai merah</span><span style="margin-left:8px;font-size:12px;color:#9c7c56">150 gr</span></div>
+        </div>
+        <div style="border-top:1px solid #f5ead6;display:flex;align-items:center;gap:13px;padding:12px 16px">
+          <span style="height:26px;width:26px;flex:none;border-radius:9px;border:2px solid #dcc79f;display:flex"></span>
+          <div style="min-width:0;flex:1"><span style="font-size:14.5px;font-weight:600">bawang merah</span><span style="margin-left:8px;font-size:12px;color:#9c7c56">1/4 kg</span></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="margin:0 4px 8px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#b8502e">🍗 Protein</div>
+      <div style="border-radius:20px;background:#fffdf8;border:1px solid #efe0c8;overflow:hidden">
+        <div style="display:flex;align-items:center;gap:13px;padding:12px 16px">
+          <span style="height:26px;width:26px;flex:none;border-radius:9px;border:2px solid #dcc79f;display:flex"></span>
+          <div style="min-width:0;flex:1"><span style="font-size:14.5px;font-weight:600">ayam</span><span style="margin-left:8px;font-size:12px;color:#9c7c56">800 gr</span></div>
+        </div>
+        <div style="border-top:1px solid #f5ead6;display:flex;align-items:center;gap:13px;padding:12px 16px">
+          <span style="height:26px;width:26px;flex:none;border-radius:9px;border:2px solid #dcc79f;display:flex"></span>
+          <div style="min-width:0;flex:1"><span style="font-size:14.5px;font-weight:600">ikan kembung</span><span style="margin-left:8px;font-size:12px;color:#9c7c56">4 ekor</span></div>
+        </div>
+        <div style="border-top:1px solid #f5ead6;display:flex;align-items:center;gap:13px;padding:12px 16px">
+          <span style="height:26px;width:26px;flex:none;border-radius:9px;background:#5c7d4a;color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center">✓</span>
+          <div style="min-width:0;flex:1;opacity:.45;text-decoration:line-through"><span style="font-size:14.5px;font-weight:600">tahu</span><span style="margin-left:8px;font-size:12px;color:#9c7c56">2 papan</span></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="margin:0 4px 8px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#b8502e">🧂 Bumbu Dapur</div>
+      <div style="border-radius:20px;background:#fffdf8;border:1px solid #efe0c8;overflow:hidden">
+        <div style="display:flex;align-items:center;gap:13px;padding:12px 16px">
+          <span style="height:26px;width:26px;flex:none;border-radius:9px;border:2px solid #dcc79f;display:flex"></span>
+          <div style="min-width:0;flex:1"><span style="font-size:14.5px;font-weight:600">santan instan</span><span style="margin-left:8px;font-size:12px;color:#9c7c56">200 ml</span></div>
+        </div>
+        <div style="border-top:1px solid #f5ead6;display:flex;align-items:center;gap:13px;padding:12px 16px">
+          <span style="height:26px;width:26px;flex:none;border-radius:9px;border:2px solid #dcc79f;display:flex"></span>
+          <div style="min-width:0;flex:1"><span style="font-size:14.5px;font-weight:600">terasi</span><span style="margin-left:8px;font-size:12px;color:#9c7c56">1 bungkus kecil</span><span style="margin-left:8px;border-radius:9999px;background:#f3e5cd;color:#8a6d4c;padding:1px 8px;font-size:10.5px;font-weight:700">supermarket</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:18px;border-radius:9999px;background:#b8502e;box-shadow:0 6px 16px rgba(184,80,46,.3);padding:15px 20px;text-align:center;font-weight:800;font-size:15.5px;color:#fff8ef;display:flex;align-items:center;justify-content:center;gap:8px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff8ef" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 a8 8 0 1 0-3.2 6.4 L21 20 l-1-4.2 A8 8 0 0 0 20 12 z"></path></svg><span>Salin untuk WhatsApp</span></div>
+  <nav style="position:absolute;left:12px;right:12px;bottom:12px;border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 8px 24px rgba(139,90,43,.12);display:flex;padding:6px 8px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M4 12 h16"></path><path d="M5 12 a7 7 0 0 0 14 0"></path><path d="M9 8 c0-2 6-2 6 0"></path></svg><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;border-radius:18px;background:#f9efdd;font-size:10.5px;font-weight:700;color:#b8502e"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b8502e" stroke-width="2" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M4 10 h16"></path><path d="M9 3 v4 M15 3 v4"></path></svg><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M5 10 h14 l-1.5 9 h-11 z"></path><path d="M9 10 c0-5 6-5 6 0"></path></svg><span>Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M5 5 h13 a1 1 0 0 1 1 1 v13 a1 1 0 0 1-1 1 H5 z"></path><path d="M5 5 v15 M9 5 v15"></path></svg><span>Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="3"></circle><circle cx="16.5" cy="10.5" r="2.2"></circle><path d="M4 20 c0-4 10-4 10 0 M14.5 16.5 c3-1.5 6 .5 6 3.5"></path></svg><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+<!-- ============ 2c ADA BAHAN ============ -->
+<div class="dv-opt" id="2c" data-screen-label="2c Ada Bahan — Dapur Hangat">
+<div class="dv-olabel"><a class="dv-oid" href="#2c">2c</a>Ada Bahan Apa?</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#faf3e7;position:relative;font-family:'Plus Jakarta Sans','Inter',system-ui,sans-serif;color:#33251a;padding:20px 20px 110px">
+  <div style="font-size:13px;font-weight:600;color:#b8502e;letter-spacing:.02em">Cek kulkas dulu 🧺</div>
+  <h1 style="margin:2px 0 0;font-size:28px;line-height:34px;font-weight:800;letter-spacing:-.02em">Ada bahan apa?</h1>
+  <p style="margin:8px 0 0;font-size:13.5px;line-height:1.5;color:#8a6d4c">Ketik bahan yang ada. Kami carikan menu yang paling cocok dengan stok kamu.</p>
+  <div style="margin-top:14px;border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;padding:14px 18px;display:flex;align-items:center;gap:10px">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b08a5e" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 L21 21"></path></svg>
+    <span style="font-size:14.5px;color:#b08a5e">Cari bahan… mis. ayam, kangkung</span>
+  </div>
+  <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px">
+    <span style="border-radius:9999px;background:#33251a;color:#faf3e7;padding:8px 14px;font-size:13px;font-weight:700">ayam ✕</span>
+    <span style="border-radius:9999px;background:#33251a;color:#faf3e7;padding:8px 14px;font-size:13px;font-weight:700">kangkung ✕</span>
+    <span style="border-radius:9999px;background:#33251a;color:#faf3e7;padding:8px 14px;font-size:13px;font-weight:700">telur ✕</span>
+  </div>
+  <div style="margin-top:22px;font-size:16px;font-weight:800">Paling cocok sama stokmu</div>
+  <div style="margin-top:10px;display:flex;flex-direction:column;gap:12px">
+    <div style="border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 2px 8px rgba(139,90,43,.06);padding:14px 16px;display:flex;gap:14px">
+      <div style="height:64px;width:64px;flex:none;border-radius:16px;background:repeating-linear-gradient(45deg,#e5eedd,#e5eedd 6px,#dde8d2 6px,#dde8d2 12px);display:flex;align-items:center;justify-content:center;font:600 8px ui-monospace,monospace;color:#75885f;text-align:center">foto</div>
+      <div style="min-width:0;flex:1">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+          <span style="font-size:15.5px;font-weight:700">Tumis Kangkung</span>
+          <span style="flex:none;border-radius:9999px;background:#5c7d4a;color:#fff;padding:3px 10px;font-size:11px;font-weight:800">90%</span>
+        </div>
+        <div style="margin-top:2px;font-size:12px;color:#9c7c56">15 menit · cepat · Ekonomis</div>
+        <div style="margin-top:5px;font-size:13px;font-weight:700;color:#5c7d4a">Semua bahan sudah ada! 🎉</div>
+      </div>
+    </div>
+    <div style="border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 2px 8px rgba(139,90,43,.06);padding:14px 16px;display:flex;gap:14px">
+      <div style="height:64px;width:64px;flex:none;border-radius:16px;background:repeating-linear-gradient(45deg,#f3e5cd,#f3e5cd 6px,#eeddc0 6px,#eeddc0 12px);display:flex;align-items:center;justify-content:center;font:600 8px ui-monospace,monospace;color:#a3814f;text-align:center">foto</div>
+      <div style="min-width:0;flex:1">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+          <span style="font-size:15.5px;font-weight:700">Ayam Goreng Lengkuas</span>
+          <span style="flex:none;border-radius:9999px;background:#8fa76b;color:#fff;padding:3px 10px;font-size:11px;font-weight:800">75%</span>
+        </div>
+        <div style="margin-top:2px;font-size:12px;color:#9c7c56">45 menit · Sedang</div>
+        <div style="margin-top:5px;font-size:13px;color:#6b4c33">Tinggal beli: <b>lengkuas, ketumbar, daun salam</b></div>
+      </div>
+    </div>
+    <div style="border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 2px 8px rgba(139,90,43,.06);padding:14px 16px;display:flex;gap:14px">
+      <div style="height:64px;width:64px;flex:none;border-radius:16px;background:repeating-linear-gradient(45deg,#f3e5cd,#f3e5cd 6px,#eeddc0 6px,#eeddc0 12px);display:flex;align-items:center;justify-content:center;font:600 8px ui-monospace,monospace;color:#a3814f;text-align:center">foto</div>
+      <div style="min-width:0;flex:1">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+          <span style="font-size:15.5px;font-weight:700">Telur Balado</span>
+          <span style="flex:none;border-radius:9999px;background:#d9a441;color:#fff;padding:3px 10px;font-size:11px;font-weight:800">55%</span>
+        </div>
+        <div style="margin-top:2px;font-size:12px;color:#9c7c56">25 menit · Ekonomis</div>
+        <div style="margin-top:5px;font-size:13px;color:#6b4c33">Tinggal beli: <b>cabai merah, tomat, bawang merah</b></div>
+      </div>
+    </div>
+  </div>
+  <nav style="position:absolute;left:12px;right:12px;bottom:12px;border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 8px 24px rgba(139,90,43,.12);display:flex;padding:6px 8px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M4 12 h16"></path><path d="M5 12 a7 7 0 0 0 14 0"></path><path d="M9 8 c0-2 6-2 6 0"></path></svg><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M4 10 h16"></path><path d="M9 3 v4 M15 3 v4"></path></svg><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;border-radius:18px;background:#f9efdd;font-size:10.5px;font-weight:700;color:#b8502e"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b8502e" stroke-width="2" stroke-linecap="round"><path d="M5 10 h14 l-1.5 9 h-11 z"></path><path d="M9 10 c0-5 6-5 6 0"></path></svg><span>Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M5 5 h13 a1 1 0 0 1 1 1 v13 a1 1 0 0 1-1 1 H5 z"></path><path d="M5 5 v15 M9 5 v15"></path></svg><span>Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="3"></circle><circle cx="16.5" cy="10.5" r="2.2"></circle><path d="M4 20 c0-4 10-4 10 0 M14.5 16.5 c3-1.5 6 .5 6 3.5"></path></svg><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+<!-- ============ 2d SEMUA MENU ============ -->
+<div class="dv-opt" id="2d" data-screen-label="2d Semua Menu — Dapur Hangat">
+<div class="dv-olabel"><a class="dv-oid" href="#2d">2d</a>Semua Menu</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#faf3e7;position:relative;font-family:'Plus Jakarta Sans','Inter',system-ui,sans-serif;color:#33251a;padding:20px 20px 110px">
+  <div style="font-size:13px;font-weight:600;color:#b8502e;letter-spacing:.02em">335 resep rumahan 📖</div>
+  <h1 style="margin:2px 0 0;font-size:28px;line-height:34px;font-weight:800;letter-spacing:-.02em">Semua Menu</h1>
+  <div style="margin-top:14px;border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;padding:14px 18px;display:flex;align-items:center;gap:10px">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b08a5e" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 L21 21"></path></svg>
+    <span style="font-size:14.5px;color:#b08a5e">Cari nama menu… mis. gulai, tumis</span>
+  </div>
+  <div style="margin-top:12px;display:flex;gap:8px;overflow:hidden">
+    <span style="white-space:nowrap;border-radius:9999px;background:#b8502e;color:#fff8ef;padding:8px 14px;font-size:13px;font-weight:700">Semua jenis</span>
+    <span style="white-space:nowrap;border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:8px 14px;font-size:13px;font-weight:600">Lauk utama</span>
+    <span style="white-space:nowrap;border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:8px 14px;font-size:13px;font-weight:600">Sayur</span>
+    <span style="white-space:nowrap;border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:8px 14px;font-size:13px;font-weight:600">Pelengkap</span>
+  </div>
+  <div style="margin-top:8px;display:flex;gap:8px;overflow:hidden">
+    <span style="white-space:nowrap;border-radius:9999px;background:#33251a;color:#faf3e7;padding:8px 14px;font-size:13px;font-weight:700">Ayam</span>
+    <span style="white-space:nowrap;border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:8px 14px;font-size:13px;font-weight:600">Ikan</span>
+    <span style="white-space:nowrap;border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:8px 14px;font-size:13px;font-weight:600">Telur</span>
+    <span style="white-space:nowrap;border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:8px 14px;font-size:13px;font-weight:600">Tahu-Tempe</span>
+    <span style="white-space:nowrap;border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:8px 14px;font-size:13px;font-weight:600">Daging</span>
+  </div>
+  <div style="margin-top:14px;font-size:12px;font-weight:600;color:#9c7c56">42 menu ditemukan</div>
+  <div style="margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div style="border-radius:20px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 2px 8px rgba(139,90,43,.06);overflow:hidden">
+      <div style="height:96px;background:repeating-linear-gradient(45deg,#f3e5cd,#f3e5cd 6px,#eeddc0 6px,#eeddc0 12px);display:flex;align-items:center;justify-content:center;font:600 8.5px ui-monospace,monospace;color:#a3814f;position:relative">foto menu<span style="position:absolute;top:8px;right:8px;height:26px;width:26px;border-radius:9999px;background:rgba(255,253,248,.92);display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="#b8502e" stroke="#b8502e" stroke-width="1.5" stroke-linejoin="round"><path d="M12 20 C7 15.5 3.5 12.5 3.5 8.8 A4.3 4.3 0 0 1 12 7.2 a4.3 4.3 0 0 1 8.5 1.6 C20.5 12.5 17 15.5 12 20 z"></path></svg></span></div>
+      <div style="padding:10px 12px 12px">
+        <div style="font-size:13.5px;font-weight:700;line-height:1.25">Ayam Goreng Lengkuas</div>
+        <div style="margin-top:3px;font-size:11px;color:#9c7c56">45 mnt · Sedang</div>
+      </div>
+    </div>
+    <div style="border-radius:20px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 2px 8px rgba(139,90,43,.06);overflow:hidden">
+      <div style="height:96px;background:repeating-linear-gradient(45deg,#f3e5cd,#f3e5cd 6px,#eeddc0 6px,#eeddc0 12px);display:flex;align-items:center;justify-content:center;font:600 8.5px ui-monospace,monospace;color:#a3814f">foto menu</div>
+      <div style="padding:10px 12px 12px">
+        <div style="font-size:13.5px;font-weight:700;line-height:1.25">Ayam Goreng Kalasan</div>
+        <div style="margin-top:3px;font-size:11px;color:#9c7c56">60 mnt · Sedang</div>
+      </div>
+    </div>
+    <div style="border-radius:20px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 2px 8px rgba(139,90,43,.06);overflow:hidden">
+      <div style="height:96px;background:repeating-linear-gradient(45deg,#f3e5cd,#f3e5cd 6px,#eeddc0 6px,#eeddc0 12px);display:flex;align-items:center;justify-content:center;font:600 8.5px ui-monospace,monospace;color:#a3814f;position:relative">foto menu<span style="position:absolute;top:8px;left:8px;border-radius:9999px;background:#fbe3dc;color:#a63d20;padding:2px 8px;font:700 10px 'Plus Jakarta Sans',sans-serif">pedas</span></div>
+      <div style="padding:10px 12px 12px">
+        <div style="font-size:13.5px;font-weight:700;line-height:1.25">Ayam Goreng Serundeng</div>
+        <div style="margin-top:3px;font-size:11px;color:#9c7c56">55 mnt · Sedang</div>
+      </div>
+    </div>
+    <div style="border-radius:20px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 2px 8px rgba(139,90,43,.06);overflow:hidden;opacity:.55">
+      <div style="height:96px;background:repeating-linear-gradient(45deg,#f3e5cd,#f3e5cd 6px,#eeddc0 6px,#eeddc0 12px);display:flex;align-items:center;justify-content:center;font:600 8.5px ui-monospace,monospace;color:#a3814f;position:relative">foto menu<span style="position:absolute;top:8px;right:8px;height:26px;width:26px;border-radius:9999px;background:rgba(255,253,248,.92);display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a6d4c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"></circle><path d="M6 6 l12 12"></path></svg></span></div>
+      <div style="padding:10px 12px 12px">
+        <div style="font-size:13.5px;font-weight:700;line-height:1.25">Ayam Goreng Bumbu Kuning</div>
+        <div style="margin-top:3px;font-size:11px;color:#9c7c56">45 mnt · Sedang</div>
+      </div>
+    </div>
+  </div>
+  <nav style="position:absolute;left:12px;right:12px;bottom:12px;border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 8px 24px rgba(139,90,43,.12);display:flex;padding:6px 8px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M4 12 h16"></path><path d="M5 12 a7 7 0 0 0 14 0"></path><path d="M9 8 c0-2 6-2 6 0"></path></svg><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M4 10 h16"></path><path d="M9 3 v4 M15 3 v4"></path></svg><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M5 10 h14 l-1.5 9 h-11 z"></path><path d="M9 10 c0-5 6-5 6 0"></path></svg><span>Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;border-radius:18px;background:#f9efdd;font-size:10.5px;font-weight:700;color:#b8502e"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b8502e" stroke-width="2" stroke-linecap="round"><path d="M5 5 h13 a1 1 0 0 1 1 1 v13 a1 1 0 0 1-1 1 H5 z"></path><path d="M5 5 v15 M9 5 v15"></path></svg><span>Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="3"></circle><circle cx="16.5" cy="10.5" r="2.2"></circle><path d="M4 20 c0-4 10-4 10 0 M14.5 16.5 c3-1.5 6 .5 6 3.5"></path></svg><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+<!-- ============ 2e MENU DETAIL ============ -->
+<div class="dv-opt" id="2e" data-screen-label="2e Menu Detail — Dapur Hangat">
+<div class="dv-olabel"><a class="dv-oid" href="#2e">2e</a>Menu Detail</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#faf3e7;position:relative;font-family:'Plus Jakarta Sans','Inter',system-ui,sans-serif;color:#33251a;padding:0 0 24px">
+  <div style="position:relative;height:210px;background:repeating-linear-gradient(45deg,#f3e5cd,#f3e5cd 8px,#eeddc0 8px,#eeddc0 16px);display:flex;align-items:center;justify-content:center;font:600 10px ui-monospace,monospace;color:#a3814f">
+    foto besar — ayam goreng kalasan
+    <span style="position:absolute;left:14px;top:14px;height:38px;width:38px;border-radius:9999px;background:rgba(255,253,248,.92);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.4" stroke-linecap="round"><path d="M14 5 l-7 7 7 7"></path></svg></span>
+    <span style="position:absolute;right:14px;top:14px;height:38px;width:38px;border-radius:9999px;background:rgba(255,253,248,.92);display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#b8502e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20 C7 15.5 3.5 12.5 3.5 8.8 A4.3 4.3 0 0 1 12 7.2 a4.3 4.3 0 0 1 8.5 1.6 C20.5 12.5 17 15.5 12 20 z"></path></svg></span>
+  </div>
+  <div style="margin:-24px 16px 0;position:relative;border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 8px 24px rgba(139,90,43,.1);padding:18px 18px 16px">
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#b8502e">Lauk utama · Ayam</div>
+    <h1 style="margin:4px 0 0;font-size:24px;line-height:29px;font-weight:800;letter-spacing:-.02em">Ayam Goreng Kalasan</h1>
+    <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+      <span style="border-radius:9999px;background:#f3e5cd;color:#6b4c33;padding:5px 11px;font-size:11.5px;font-weight:700">⏱️ 60 menit</span>
+      <span style="border-radius:9999px;background:#f3e5cd;color:#6b4c33;padding:5px 11px;font-size:11.5px;font-weight:700">🎚️ Sedang</span>
+      <span style="border-radius:9999px;background:#f3e5cd;color:#6b4c33;padding:5px 11px;font-size:11.5px;font-weight:700">💰 Sedang</span>
+      <span style="border-radius:9999px;background:#f3e5cd;color:#6b4c33;padding:5px 11px;font-size:11.5px;font-weight:700">🥥 santan</span>
+    </div>
+  </div>
+  <div style="padding:16px 16px 0;display:flex;gap:10px">
+    <div style="flex:1;border-radius:9999px;background:#b8502e;box-shadow:0 6px 16px rgba(184,80,46,.25);padding:13px 0;text-align:center;font-weight:800;font-size:14px;color:#fff8ef">＋ Masak hari ini</div>
+    <div style="flex:none;border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;padding:13px 18px;display:flex;align-items:center;color:#8a6d4c"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#8a6d4c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"></circle><path d="M6 6 l12 12"></path></svg></div>
+  </div>
+  <div style="margin:16px 16px 0;border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;padding:18px">
+    <h2 style="margin:0 0 10px;font-size:15px;font-weight:800;color:#7a3c1e">Bahan <span style="font-weight:600;font-size:12px;color:#9c7c56">· per porsi</span></h2>
+    <div style="display:flex;flex-direction:column;gap:7px;font-size:14px">
+      <div style="display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed #efe0c8;padding-bottom:7px"><span style="font-weight:600">ayam</span><span style="flex:none;color:#9c7c56">200 gr</span></div>
+      <div style="display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed #efe0c8;padding-bottom:7px"><span style="font-weight:600">santan kelapa</span><span style="flex:none;color:#9c7c56">100 ml</span></div>
+      <div style="display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed #efe0c8;padding-bottom:7px"><span style="font-weight:600">gula merah</span><span style="flex:none;color:#9c7c56">1 sdm</span></div>
+      <div style="display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed #efe0c8;padding-bottom:7px"><span style="font-weight:600">bawang putih</span><span style="flex:none;color:#9c7c56">3 siung</span></div>
+      <div style="display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed #efe0c8;padding-bottom:7px"><span style="font-weight:600">ketumbar</span><span style="flex:none;color:#9c7c56">1 sdt</span></div>
+      <div style="display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed #efe0c8;padding-bottom:7px"><span style="font-weight:600">lengkuas</span><span style="flex:none;color:#9c7c56">2 cm</span></div>
+      <div style="display:flex;justify-content:space-between;gap:12px"><span style="font-weight:600">daun salam</span><span style="flex:none;color:#9c7c56">2 lembar</span></div>
+    </div>
+    <p style="margin:12px 0 0;font-size:11.5px;color:#b08a5e">Bumbu pokok (dianggap selalu ada): garam.</p>
+  </div>
+  <div style="margin:14px 16px 0;border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;padding:18px">
+    <h2 style="margin:0 0 12px;font-size:15px;font-weight:800;color:#7a3c1e">Cara masak</h2>
+    <div style="display:flex;flex-direction:column;gap:12px;font-size:14px">
+      <div style="display:flex;gap:12px"><span style="height:26px;width:26px;flex:none;border-radius:9999px;background:#b8502e;color:#fff8ef;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">1</span><span style="line-height:1.5;color:#4d3a26">Haluskan bawang putih, ketumbar, dan lengkuas.</span></div>
+      <div style="display:flex;gap:12px"><span style="height:26px;width:26px;flex:none;border-radius:9999px;background:#b8502e;color:#fff8ef;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">2</span><span style="line-height:1.5;color:#4d3a26">Ungkep ayam bersama bumbu, santan, gula merah, daun salam, dan garam.</span></div>
+      <div style="display:flex;gap:12px"><span style="height:26px;width:26px;flex:none;border-radius:9999px;background:#b8502e;color:#fff8ef;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">3</span><span style="line-height:1.5;color:#4d3a26">Masak api kecil sampai bumbu meresap dan kuah menyusut, sekitar 40 menit.</span></div>
+      <div style="display:flex;gap:12px"><span style="height:26px;width:26px;flex:none;border-radius:9999px;background:#b8502e;color:#fff8ef;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">4</span><span style="line-height:1.5;color:#4d3a26">Goreng ayam sebentar sampai kecokelatan.</span></div>
+      <div style="display:flex;gap:12px"><span style="height:26px;width:26px;flex:none;border-radius:9999px;background:#b8502e;color:#fff8ef;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">5</span><span style="line-height:1.5;color:#4d3a26">Sajikan dengan sisa bumbu ungkep yang dikentalkan.</span></div>
+    </div>
+  </div>
+  <div style="margin:14px 16px 0;border-radius:24px;background:#f9efdd;padding:16px 18px;display:flex;align-items:center;gap:18px">
+    <div><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#b08a5e">Energi</div><div style="font-size:15px;font-weight:800">± 380 kkal</div></div>
+    <div><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#b08a5e">Protein</div><div style="font-size:15px;font-weight:800">± 27 g</div></div>
+    <div style="flex:1;font-size:10.5px;color:#b08a5e;text-align:right">perkiraan kasar,<br>bukan angka pasti</div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- ============ 2f KELUARGA ============ -->
+<div class="dv-opt" id="2f" data-screen-label="2f Keluarga — Dapur Hangat">
+<div class="dv-olabel"><a class="dv-oid" href="#2f">2f</a>Keluarga</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#faf3e7;position:relative;font-family:'Plus Jakarta Sans','Inter',system-ui,sans-serif;color:#33251a;padding:20px 20px 110px">
+  <div style="font-size:13px;font-weight:600;color:#b8502e;letter-spacing:.02em">Preferensi rumah 👪</div>
+  <h1 style="margin:2px 0 0;font-size:28px;line-height:34px;font-weight:800;letter-spacing:-.02em">Keluarga</h1>
+  <p style="margin:8px 0 0;font-size:13.5px;line-height:1.5;color:#8a6d4c">Alergi jadi filter wajib; nggak-suka cuma bikin menu itu jarang muncul. Semua opsional.</p>
+  <div style="margin:20px 0 8px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#b8502e">Anggota</div>
+  <div style="border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 2px 8px rgba(139,90,43,.06);padding:16px;display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="height:44px;width:44px;flex:none;border-radius:9999px;background:#f3e5cd;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#8a6d4c">I</span>
+      <div style="min-width:0;flex:1">
+        <div style="font-size:16px;font-weight:800">Ibu</div>
+        <div style="font-size:12px;color:#9c7c56">Dewasa · tahan pedas sedang</div>
+      </div>
+      <span style="flex:none;font-size:12.5px;font-weight:700;color:#b8502e">Hapus</span>
+    </div>
+    <div>
+      <div style="margin-bottom:6px;font-size:11.5px;font-weight:700;color:#8a6d4c">Umur</div>
+      <div style="display:flex;gap:8px">
+        <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:7px 14px;font-size:13px;font-weight:600">Anak</span>
+        <span style="border-radius:9999px;background:#b8502e;color:#fff8ef;padding:7px 14px;font-size:13px;font-weight:700">Dewasa</span>
+        <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:7px 14px;font-size:13px;font-weight:600">Lansia</span>
+      </div>
+    </div>
+    <div>
+      <div style="margin-bottom:6px;font-size:11.5px;font-weight:700;color:#8a6d4c">Tahan pedas</div>
+      <div style="display:flex;gap:8px">
+        <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;padding:7px 13px;font-size:13px">🚫</span>
+        <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;padding:7px 13px;font-size:13px">🌶️</span>
+        <span style="border-radius:9999px;background:#b8502e;padding:7px 13px;font-size:13px">🌶️🌶️</span>
+        <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;padding:7px 13px;font-size:13px">🌶️🌶️🌶️</span>
+      </div>
+    </div>
+    <div>
+      <div style="margin-bottom:6px;font-size:11.5px;font-weight:700;color:#8a6d4c">Alergi <span style="font-weight:600;color:#b08a5e">· filter wajib</span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+        <span style="border-radius:9999px;background:#fbe3dc;color:#a63d20;padding:5px 11px;font-size:12px;font-weight:700">udang ✕</span>
+        <span style="border-radius:9999px;border:1.5px dashed #dcc79f;color:#a3814f;padding:5px 11px;font-size:12px;font-weight:700">＋ Tambah</span>
+      </div>
+    </div>
+    <div>
+      <div style="margin-bottom:6px;font-size:11.5px;font-weight:700;color:#8a6d4c">Nggak suka <span style="font-weight:600;color:#b08a5e">· jarang muncul</span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+        <span style="border-radius:9999px;background:#f3e5cd;color:#6b4c33;padding:5px 11px;font-size:12px;font-weight:700">pare ✕</span>
+        <span style="border-radius:9999px;border:1.5px dashed #dcc79f;color:#a3814f;padding:5px 11px;font-size:12px;font-weight:700">＋ Tambah</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:12px;border-radius:24px;border:2px dashed #dcc79f;padding:14px 0;text-align:center;font-size:13.5px;font-weight:800;color:#b8502e">＋ Tambah anggota</div>
+  <div style="margin:22px 0 8px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#b8502e">Pengaturan Masak</div>
+  <div style="border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 2px 8px rgba(139,90,43,.06);padding:16px;display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <span style="font-size:14px;font-weight:600;color:#6b4c33">Porsi default</span>
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="height:34px;width:34px;border-radius:9999px;background:#f3e5cd;color:#6b4c33;font-size:17px;font-weight:800;display:flex;align-items:center;justify-content:center">−</span>
+        <span style="width:22px;text-align:center;font-size:16px;font-weight:800">4</span>
+        <span style="height:34px;width:34px;border-radius:9999px;background:#f3e5cd;color:#6b4c33;font-size:17px;font-weight:800;display:flex;align-items:center;justify-content:center">＋</span>
+      </div>
+    </div>
+    <div>
+      <div style="margin-bottom:6px;font-size:14px;font-weight:600;color:#6b4c33">Jumlah lauk per makan</div>
+      <div style="display:flex;gap:8px">
+        <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:7px 13px;font-size:12.5px;font-weight:600">2 · lauk+sayur</span>
+        <span style="border-radius:9999px;background:#b8502e;color:#fff8ef;padding:7px 13px;font-size:12.5px;font-weight:700">3 · +pelengkap</span>
+        <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:7px 13px;font-size:12.5px;font-weight:600">4 · +sup</span>
+      </div>
+    </div>
+    <div>
+      <div style="margin-bottom:6px;font-size:14px;font-weight:600;color:#6b4c33">Batas waktu masak hari kerja</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:7px 14px;font-size:13px;font-weight:600">30'</span>
+        <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:7px 14px;font-size:13px;font-weight:600">45'</span>
+        <span style="border-radius:9999px;background:#b8502e;color:#fff8ef;padding:7px 14px;font-size:13px;font-weight:700">60'</span>
+        <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:7px 14px;font-size:13px;font-weight:600">90'</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:20px;text-align:center;font-size:13px;font-weight:600;color:#b08a5e;text-decoration:underline">Reset semua data</div>
+  <nav style="position:absolute;left:12px;right:12px;bottom:12px;border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 8px 24px rgba(139,90,43,.12);display:flex;padding:6px 8px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M4 12 h16"></path><path d="M5 12 a7 7 0 0 0 14 0"></path><path d="M9 8 c0-2 6-2 6 0"></path></svg><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M4 10 h16"></path><path d="M9 3 v4 M15 3 v4"></path></svg><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M5 10 h14 l-1.5 9 h-11 z"></path><path d="M9 10 c0-5 6-5 6 0"></path></svg><span>Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M5 5 h13 a1 1 0 0 1 1 1 v13 a1 1 0 0 1-1 1 H5 z"></path><path d="M5 5 v15 M9 5 v15"></path></svg><span>Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;border-radius:18px;background:#f9efdd;font-size:10.5px;font-weight:700;color:#b8502e"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b8502e" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="3"></circle><circle cx="16.5" cy="10.5" r="2.2"></circle><path d="M4 20 c0-4 10-4 10 0 M14.5 16.5 c3-1.5 6 .5 6 3.5"></path></svg><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Hari Ini stays as <a class="dv-oid" href="#1a">1a</a>. Next: "build the interactive prototype" · tweak any screen by id.</p>
+</section>
+
+<section class="dv-turn" id="t1" data-screen-label="Turn 1 — makeover directions">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Three makeover directions — Hari Ini screen (compare against <a class="dv-oid" href="#0a">0a</a>)</span></div>
+<div class="dv-opts">
+
+<!-- ============ 1a DAPUR HANGAT ============ -->
+<div class="dv-opt" id="1a" data-screen-label="1a Dapur Hangat">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Dapur Hangat — warm &amp; homey, refined terracotta</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#faf3e7;position:relative;font-family:'Plus Jakarta Sans','Inter',system-ui,sans-serif;color:#33251a;padding:20px 20px 110px">
+  <div style="font-size:13px;font-weight:600;color:#b8502e;letter-spacing:.02em">Selamat sore 👋</div>
+  <h1 style="margin:2px 0 0;font-size:28px;line-height:34px;font-weight:800;letter-spacing:-.02em">Masak apa<br>hari ini?</h1>
+  <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:8px">
+    <span style="border-radius:9999px;background:#b8502e;color:#fff8ef;padding:8px 14px;font-size:13.5px;font-weight:600">🌶️ Pedas</span>
+    <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:8px 14px;font-size:13.5px;font-weight:600">🍜 Berkuah</span>
+    <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:8px 14px;font-size:13.5px;font-weight:600">🥬 Seger</span>
+    <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:8px 14px;font-size:13.5px;font-weight:600">⚡ Cepet</span>
+    <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:8px 14px;font-size:13.5px;font-weight:600">💰 Ekonomis</span>
+    <span style="border-radius:9999px;background:#fffdf8;border:1px solid #e9d7bc;color:#6b4c33;padding:8px 14px;font-size:13.5px;font-weight:600">✨ Spesial</span>
+  </div>
+  <div style="margin-top:14px;border-radius:20px;background:#fffdf8;border:1px solid #efe0c8;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px">
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#b08a5e">Hari ini</span>
+      <span style="font-size:14.5px;font-weight:600">4 porsi · 3 lauk · Ibu, Ayah, Adek</span>
+    </div>
+    <span style="flex:none;border-radius:9999px;background:#f3e5cd;color:#6b4c33;padding:8px 14px;font-size:13px;font-weight:700">Ubah</span>
+  </div>
+  <div style="margin-top:22px;display:flex;align-items:baseline;justify-content:space-between">
+    <span style="font-size:16px;font-weight:800">Usulan hari ini</span>
+    <span style="font-size:13px;font-weight:700;color:#b8502e;display:inline-flex;align-items:center;gap:5px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8502e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7 h3.5 L17 17 h4"></path><path d="M18.5 14.5 L21 17 l-2.5 2.5"></path><path d="M3 17 h3.5 l3-3.4"></path><path d="M14.2 10.6 L17 7 h4"></path><path d="M18.5 4.5 L21 7 l-2.5 2.5"></path></svg><span>Ganti semua</span></span>
+  </div>
+  <div style="margin-top:10px;border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 2px 8px rgba(139,90,43,.06);overflow:hidden">
+    <div style="display:flex;align-items:center;gap:14px;padding:14px 16px">
+      <div style="height:56px;width:56px;flex:none;border-radius:16px;background:repeating-linear-gradient(45deg,#f3e5cd,#f3e5cd 6px,#eeddc0 6px,#eeddc0 12px);display:flex;align-items:center;justify-content:center;font:600 8.5px ui-monospace,monospace;color:#a3814f;text-align:center">foto<br>lauk</div>
+      <div style="min-width:0;flex:1">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#b8502e">Lauk</div>
+        <div style="font-size:15.5px;font-weight:700">Ayam Goreng Lengkuas</div>
+        <div style="margin-top:1px;font-size:12.5px;color:#9c7c56">45 menit</div>
+      </div>
+      <span style="flex:none;height:36px;width:36px;border-radius:9999px;background:#f3e5cd;display:flex;align-items:center;justify-content:center;font-size:15px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12 a8.5 8.5 0 1 1-2.6-6.1"></path><path d="M20.5 3.5 v4.5 h-4.5"></path></svg></span>
+    </div>
+    <div style="border-top:1px solid #f5ead6;display:flex;align-items:center;gap:14px;padding:14px 16px">
+      <div style="height:56px;width:56px;flex:none;border-radius:16px;background:repeating-linear-gradient(45deg,#e5eedd,#e5eedd 6px,#dde8d2 6px,#dde8d2 12px);display:flex;align-items:center;justify-content:center;font:600 8.5px ui-monospace,monospace;color:#75885f;text-align:center">foto<br>sayur</div>
+      <div style="min-width:0;flex:1">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#5c7d4a">Sayur</div>
+        <div style="font-size:15.5px;font-weight:700">Tumis Kangkung</div>
+        <div style="margin-top:1px;font-size:12.5px;color:#9c7c56">15 menit · cepat</div>
+      </div>
+      <span style="flex:none;height:36px;width:36px;border-radius:9999px;background:#f3e5cd;display:flex;align-items:center;justify-content:center;font-size:15px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12 a8.5 8.5 0 1 1-2.6-6.1"></path><path d="M20.5 3.5 v4.5 h-4.5"></path></svg></span>
+    </div>
+    <div style="border-top:1px solid #f5ead6;display:flex;align-items:center;gap:14px;padding:14px 16px">
+      <div style="height:56px;width:56px;flex:none;border-radius:16px;background:repeating-linear-gradient(45deg,#f3e5cd,#f3e5cd 6px,#eeddc0 6px,#eeddc0 12px);display:flex;align-items:center;justify-content:center;font:600 8.5px ui-monospace,monospace;color:#a3814f;text-align:center">foto<br>tempe</div>
+      <div style="min-width:0;flex:1">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#b8502e">Pelengkap</div>
+        <div style="font-size:15.5px;font-weight:700">Tempe Goreng</div>
+        <div style="margin-top:1px;font-size:12.5px;color:#9c7c56">20 menit · cepat</div>
+      </div>
+      <span style="flex:none;height:36px;width:36px;border-radius:9999px;background:#f3e5cd;display:flex;align-items:center;justify-content:center;font-size:15px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b4c33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12 a8.5 8.5 0 1 1-2.6-6.1"></path><path d="M20.5 3.5 v4.5 h-4.5"></path></svg></span>
+    </div>
+    <div style="background:#f9efdd;padding:14px 16px">
+      <p style="margin:0;font-size:13.5px;line-height:1.45;color:#5f452c">💡 Lauk gorengnya gurih, jadi sayurnya tumis yang seger biar seimbang.</p>
+      <div style="margin-top:10px;display:flex;gap:8px">
+        <span style="border-radius:9999px;background:#fffdf8;border:1px solid #efe0c8;padding:4px 10px;font-size:11.5px;font-weight:600;color:#6b4c33">⏱️ 80 mnt</span>
+        <span style="border-radius:9999px;background:#fffdf8;border:1px solid #efe0c8;padding:4px 10px;font-size:11.5px;font-weight:600;color:#6b4c33">💰 Sedang</span>
+        <span style="border-radius:9999px;background:#fffdf8;border:1px solid #efe0c8;padding:4px 10px;font-size:11.5px;font-weight:600;color:#6b4c33">± 620 kkal</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:16px;border-radius:9999px;background:#b8502e;box-shadow:0 6px 16px rgba(184,80,46,.3);padding:16px 20px;text-align:center;font-weight:800;font-size:16.5px;color:#fff8ef">Kasih ide lain 🍳</div>
+  <nav style="position:absolute;left:12px;right:12px;bottom:12px;border-radius:24px;background:#fffdf8;border:1px solid #efe0c8;box-shadow:0 8px 24px rgba(139,90,43,.12);display:flex;padding:6px 8px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;border-radius:18px;background:#f9efdd;font-size:10.5px;font-weight:700;color:#b8502e"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b8502e" stroke-width="2" stroke-linecap="round"><path d="M4 12 h16"></path><path d="M5 12 a7 7 0 0 0 14 0"></path><path d="M9 8 c0-2 6-2 6 0"></path></svg><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M4 10 h16"></path><path d="M9 3 v4 M15 3 v4"></path></svg><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M5 10 h14 l-1.5 9 h-11 z"></path><path d="M9 10 c0-5 6-5 6 0"></path></svg><span>Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><path d="M5 5 h13 a1 1 0 0 1 1 1 v13 a1 1 0 0 1-1 1 H5 z"></path><path d="M5 5 v15 M9 5 v15"></path></svg><span>Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0;font-size:10.5px;font-weight:600;color:#ab8f6b"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#ab8f6b" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="3"></circle><circle cx="16.5" cy="10.5" r="2.2"></circle><path d="M4 20 c0-4 10-4 10 0 M14.5 16.5 c3-1.5 6 .5 6 3.5"></path></svg><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+<!-- ============ 1b DAPUR SEGAR ============ -->
+<div class="dv-opt" id="1b" data-screen-label="1b Dapur Segar">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Dapur Segar — fresh &amp; airy, suggestion-first, leaf green</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#fbfcfa;position:relative;font-family:'Inter',system-ui,sans-serif;color:#222924;padding:20px 20px 110px">
+  <div style="display:flex;align-items:center;justify-content:space-between">
+    <div>
+      <div style="font-size:13px;color:#7a857c">Rabu, 11 Juli</div>
+      <h1 style="margin:2px 0 0;font-size:24px;line-height:30px;font-weight:800;letter-spacing:-.02em;color:#1d241f">Masak apa hari ini?</h1>
+    </div>
+    <div style="height:42px;width:42px;border-radius:9999px;background:#e7efe8;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#2f7d54">4🍽</div>
+  </div>
+  <div style="margin-top:16px;border-radius:24px;background:#fff;box-shadow:0 1px 2px rgba(20,40,25,.04),0 8px 24px rgba(20,40,25,.06);overflow:hidden">
+    <div style="height:140px;background:repeating-linear-gradient(45deg,#e7efe8,#e7efe8 8px,#dfe9e0 8px,#dfe9e0 16px);display:flex;align-items:center;justify-content:center;font:600 10px ui-monospace,monospace;color:#6d8272;position:relative">
+      foto set menu hari ini
+      <span style="position:absolute;top:12px;left:12px;border-radius:9999px;background:rgba(255,255,255,.9);padding:5px 11px;font-size:11.5px;font-weight:700;color:#2f7d54">Seimbang ✓</span>
+    </div>
+    <div style="padding:6px 0">
+      <div style="display:flex;align-items:center;gap:12px;padding:11px 18px">
+        <span style="flex:none;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#2f7d54;width:74px">Lauk</span>
+        <div style="min-width:0;flex:1;font-size:15px;font-weight:600">Ayam Goreng Lengkuas</div>
+        <span style="flex:none;font-size:12px;color:#9aa59c">45m</span>
+        <span style="flex:none;height:30px;width:30px;border-radius:9999px;background:#f1f5f1;display:flex;align-items:center;justify-content:center;font-size:13px">↻</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:11px 18px;border-top:1px solid #f1f5f1">
+        <span style="flex:none;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#2f7d54;width:74px">Sayur</span>
+        <div style="min-width:0;flex:1;font-size:15px;font-weight:600">Tumis Kangkung</div>
+        <span style="flex:none;font-size:12px;color:#9aa59c">15m</span>
+        <span style="flex:none;height:30px;width:30px;border-radius:9999px;background:#f1f5f1;display:flex;align-items:center;justify-content:center;font-size:13px">↻</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:11px 18px;border-top:1px solid #f1f5f1">
+        <span style="flex:none;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#2f7d54;width:74px">Pelengkap</span>
+        <div style="min-width:0;flex:1;font-size:15px;font-weight:600">Tempe Goreng</div>
+        <span style="flex:none;font-size:12px;color:#9aa59c">20m</span>
+        <span style="flex:none;height:30px;width:30px;border-radius:9999px;background:#f1f5f1;display:flex;align-items:center;justify-content:center;font-size:13px">↻</span>
+      </div>
+    </div>
+    <div style="margin:0 18px 16px;border-radius:14px;background:#f2f7f0;padding:11px 14px;font-size:13px;line-height:1.45;color:#48584c">Lauk gorengnya gurih, sayurnya tumis seger biar seimbang · ⏱ 80 menit · 💰 sedang</div>
+  </div>
+  <div style="margin-top:14px;display:flex;gap:10px">
+    <div style="flex:1;border-radius:9999px;background:#2f7d54;padding:15px 0;text-align:center;font-weight:700;font-size:15.5px;color:#fff;box-shadow:0 6px 16px rgba(47,125,84,.25)">Ide lain</div>
+    <div style="flex:none;border-radius:9999px;background:#fff;border:1px solid #e2e9e3;padding:15px 20px;font-weight:700;font-size:15.5px;color:#2f7d54">🔀</div>
+  </div>
+  <div style="margin-top:22px;font-size:13px;font-weight:700;color:#1d241f">Lagi pengen…</div>
+  <div style="margin-top:8px;display:flex;gap:8px;overflow:hidden">
+    <span style="white-space:nowrap;border-radius:12px;background:#1d241f;color:#fff;padding:8px 13px;font-size:13px;font-weight:600">🌶️ Pedas</span>
+    <span style="white-space:nowrap;border-radius:12px;background:#fff;border:1px solid #e2e9e3;color:#48584c;padding:8px 13px;font-size:13px;font-weight:600">🍜 Berkuah</span>
+    <span style="white-space:nowrap;border-radius:12px;background:#fff;border:1px solid #e2e9e3;color:#48584c;padding:8px 13px;font-size:13px;font-weight:600">🥬 Seger</span>
+    <span style="white-space:nowrap;border-radius:12px;background:#fff;border:1px solid #e2e9e3;color:#48584c;padding:8px 13px;font-size:13px;font-weight:600">⚡ Cepet</span>
+    <span style="white-space:nowrap;border-radius:12px;background:#fff;border:1px solid #e2e9e3;color:#48584c;padding:8px 13px;font-size:13px;font-weight:600">💰 Ekonomis</span>
+  </div>
+  <div style="margin-top:16px;border-radius:16px;background:#fff;border:1px solid #eef2ee;padding:13px 16px;display:flex;align-items:center;justify-content:space-between">
+    <span style="font-size:13.5px;color:#48584c">Makan hari ini: <b>Ibu, Ayah, Adek</b> · 4 porsi · 3 lauk</span>
+    <span style="font-size:13px;font-weight:700;color:#2f7d54">Atur</span>
+  </div>
+  <nav style="position:absolute;left:16px;right:16px;bottom:14px;border-radius:9999px;background:#1d241f;box-shadow:0 10px 30px rgba(20,30,22,.35);display:flex;padding:8px 10px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;border-radius:9999px;background:rgba(255,255,255,.14);font-size:9.5px;font-weight:700;color:#fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8fd6ac" stroke-width="2" stroke-linecap="round"><path d="M4 12 h16"></path><path d="M5 12 a7 7 0 0 0 14 0"></path><path d="M9 8 c0-2 6-2 6 0"></path></svg><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;font-size:9.5px;font-weight:600;color:#93a096"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#93a096" stroke-width="2" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M4 10 h16"></path><path d="M9 3 v4 M15 3 v4"></path></svg><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;font-size:9.5px;font-weight:600;color:#93a096"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#93a096" stroke-width="2" stroke-linecap="round"><path d="M5 10 h14 l-1.5 9 h-11 z"></path><path d="M9 10 c0-5 6-5 6 0"></path></svg><span>Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;font-size:9.5px;font-weight:600;color:#93a096"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#93a096" stroke-width="2" stroke-linecap="round"><path d="M5 5 h13 a1 1 0 0 1 1 1 v13 a1 1 0 0 1-1 1 H5 z"></path><path d="M5 5 v15 M9 5 v15"></path></svg><span>Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;font-size:9.5px;font-weight:600;color:#93a096"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#93a096" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="3"></circle><circle cx="16.5" cy="10.5" r="2.2"></circle><path d="M4 20 c0-4 10-4 10 0 M14.5 16.5 c3-1.5 6 .5 6 3.5"></path></svg><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+<!-- ============ 1c MEJA MAKAN ============ -->
+<div class="dv-opt" id="1c" data-screen-label="1c Meja Makan">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Meja Makan — premium editorial, magazine layout</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#f7f4ee;position:relative;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1c1917;padding:0 0 104px">
+  <div style="padding:22px 22px 0">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid #1c1917;padding-bottom:10px">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase">MasakApa</span>
+      <span style="font-size:11px;letter-spacing:.08em;color:#78716c">Rabu · 11 Juli</span>
+    </div>
+    <h1 style="margin:18px 0 0;font-size:36px;line-height:1.05;font-weight:800;letter-spacing:-.03em">Masak apa<br>hari ini?</h1>
+    <p style="margin:10px 0 0;font-size:13.5px;line-height:1.5;color:#57534e;max-width:280px">Satu set seimbang untuk 4 porsi — lauk gurih, sayur seger, pelengkap renyah.</p>
+  </div>
+  <div style="margin:18px 22px 0;height:170px;background:repeating-linear-gradient(45deg,#e9e2d4,#e9e2d4 8px,#e2dac9 8px,#e2dac9 16px);display:flex;align-items:center;justify-content:center;font:600 10px ui-monospace,monospace;color:#8a7d63">foto hero — set menu hari ini</div>
+  <div style="padding:4px 22px 0">
+    <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #d9d2c3;align-items:baseline">
+      <span style="flex:none;font-size:13px;font-weight:700;color:#a16207;width:26px">01</span>
+      <div style="min-width:0;flex:1">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#a8a29e">Lauk</div>
+        <div style="margin-top:2px;font-size:18px;font-weight:700;letter-spacing:-.01em">Ayam Goreng Lengkuas</div>
+        <div style="margin-top:2px;font-size:12.5px;color:#78716c">45 menit</div>
+      </div>
+      <span style="flex:none;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#a16207;border-bottom:1px solid #a16207;padding-bottom:1px">Ganti</span>
+    </div>
+    <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #d9d2c3;align-items:baseline">
+      <span style="flex:none;font-size:13px;font-weight:700;color:#a16207;width:26px">02</span>
+      <div style="min-width:0;flex:1">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#a8a29e">Sayur</div>
+        <div style="margin-top:2px;font-size:18px;font-weight:700;letter-spacing:-.01em">Tumis Kangkung</div>
+        <div style="margin-top:2px;font-size:12.5px;color:#78716c">15 menit · cepat</div>
+      </div>
+      <span style="flex:none;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#a16207;border-bottom:1px solid #a16207;padding-bottom:1px">Ganti</span>
+    </div>
+    <div style="display:flex;gap:16px;padding:16px 0;align-items:baseline">
+      <span style="flex:none;font-size:13px;font-weight:700;color:#a16207;width:26px">03</span>
+      <div style="min-width:0;flex:1">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#a8a29e">Pelengkap</div>
+        <div style="margin-top:2px;font-size:18px;font-weight:700;letter-spacing:-.01em">Tempe Goreng</div>
+        <div style="margin-top:2px;font-size:12.5px;color:#78716c">20 menit · cepat</div>
+      </div>
+      <span style="flex:none;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#a16207;border-bottom:1px solid #a16207;padding-bottom:1px">Ganti</span>
+    </div>
+    <div style="border-top:1px solid #1c1917;display:flex;padding:12px 0 0;gap:0">
+      <div style="flex:1"><div style="font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#a8a29e">Total</div><div style="font-size:14px;font-weight:700">80 menit</div></div>
+      <div style="flex:1"><div style="font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#a8a29e">Biaya</div><div style="font-size:14px;font-weight:700">Sedang</div></div>
+      <div style="flex:1"><div style="font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#a8a29e">Energi</div><div style="font-size:14px;font-weight:700">± 620 kkal</div></div>
+    </div>
+    <div style="margin-top:18px;display:flex;gap:10px">
+      <div style="flex:1;background:#1c1917;color:#f7f4ee;padding:15px 0;text-align:center;font-size:14px;font-weight:700;letter-spacing:.04em">IDE LAIN</div>
+      <div style="flex:none;border:1px solid #1c1917;padding:15px 18px;font-size:14px;font-weight:700">🔀</div>
+    </div>
+    <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:7px">
+      <span style="border:1px solid #1c1917;background:#1c1917;color:#f7f4ee;padding:6px 12px;font-size:12px;font-weight:600;letter-spacing:.04em">PEDAS</span>
+      <span style="border:1px solid #cfc7b6;color:#57534e;padding:6px 12px;font-size:12px;font-weight:600;letter-spacing:.04em">BERKUAH</span>
+      <span style="border:1px solid #cfc7b6;color:#57534e;padding:6px 12px;font-size:12px;font-weight:600;letter-spacing:.04em">SEGER</span>
+      <span style="border:1px solid #cfc7b6;color:#57534e;padding:6px 12px;font-size:12px;font-weight:600;letter-spacing:.04em">CEPET</span>
+      <span style="border:1px solid #cfc7b6;color:#57534e;padding:6px 12px;font-size:12px;font-weight:600;letter-spacing:.04em">EKONOMIS</span>
+    </div>
+  </div>
+  <nav style="position:absolute;left:0;right:0;bottom:0;border-top:1px solid #1c1917;background:#f7f4ee;display:flex;padding:2px 8px 8px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1c1917"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1c1917" stroke-width="2" stroke-linecap="round"><path d="M4 12 h16"></path><path d="M5 12 a7 7 0 0 0 14 0"></path><path d="M9 8 c0-2 6-2 6 0"></path></svg><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:9.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#a8a29e"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a8a29e" stroke-width="2" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="1"></rect><path d="M4 10 h16"></path><path d="M9 3 v4 M15 3 v4"></path></svg><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:9.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#a8a29e"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a8a29e" stroke-width="2" stroke-linecap="round"><path d="M5 10 h14 l-1.5 9 h-11 z"></path><path d="M9 10 c0-5 6-5 6 0"></path></svg><span>Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:9.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#a8a29e"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a8a29e" stroke-width="2" stroke-linecap="round"><path d="M5 5 h13 a1 1 0 0 1 1 1 v13 a1 1 0 0 1-1 1 H5 z"></path><path d="M5 5 v15 M9 5 v15"></path></svg><span>Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:9.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#a8a29e"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a8a29e" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="3"></circle><circle cx="16.5" cy="10.5" r="2.2"></circle><path d="M4 20 c0-4 10-4 10 0 M14.5 16.5 c3-1.5 6 .5 6 3.5"></path></svg><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "apply <a class="dv-oid" href="#1a">1a</a> to all 6 screens" · "mix <a class="dv-oid" href="#1b">1b</a>'s layout with <a class="dv-oid" href="#1a">1a</a>'s colors" · "more directions"</p>
+</section>
+
+<section class="dv-turn" id="t0" data-screen-label="Baseline — current UI">
+<div class="dv-thd"><a class="dv-tid" href="#t0">0</a><span class="dv-tname">Baseline — recreation of the current MasakApa UI (from your codebase)</span></div>
+<div class="dv-opts">
+
+<!-- ============ 0a HARI INI ============ -->
+<div class="dv-opt" id="0a" data-screen-label="Hari Ini (current)">
+<div class="dv-olabel"><a class="dv-oid" href="#0a">0a</a>Hari Ini — home</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#fffbeb;position:relative;font-family:'Inter',system-ui,sans-serif;color:#3f2d1d;padding:16px 16px 96px">
+  <div>
+    <h1 style="margin:0;font-size:24px;line-height:32px;font-weight:800;color:#92400e">Masak apa hari ini?</h1>
+    <p style="margin:0;font-size:14px;line-height:20px;color:#78716c">Biar nggak bingung, biar nggak itu-itu lagi. Klik tombolnya. 🍳</p>
+  </div>
+  <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:8px">
+    <span style="border-radius:9999px;border:1px solid #de5c08;background:#de5c08;color:#fff;padding:6px 12px;font-size:14px;line-height:20px;font-weight:500">🌶️ Pedas</span>
+    <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;line-height:20px;font-weight:500">🍜 Berkuah</span>
+    <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;line-height:20px;font-weight:500">🥬 Seger</span>
+    <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;line-height:20px;font-weight:500">⚡ Cepet</span>
+    <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;line-height:20px;font-weight:500">💰 Ekonomis</span>
+    <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;line-height:20px;font-weight:500">✨ Yang Spesial</span>
+    <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;line-height:20px;font-weight:500">😌 Lagi santai</span>
+  </div>
+  <div style="margin-top:12px">
+    <div style="margin-bottom:4px;font-size:12px;line-height:16px;font-weight:600;text-transform:uppercase;letter-spacing:.025em;color:#de5c08">Siapa makan hari ini?</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <span style="border-radius:9999px;border:1px solid #de5c08;background:#de5c08;color:#fff;padding:6px 12px;font-size:14px;font-weight:500">✅ Ibu</span>
+      <span style="border-radius:9999px;border:1px solid #de5c08;background:#de5c08;color:#fff;padding:6px 12px;font-size:14px;font-weight:500">✅ Ayah</span>
+      <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">Kakak</span>
+      <span style="border-radius:9999px;border:1px solid #de5c08;background:#de5c08;color:#fff;padding:6px 12px;font-size:14px;font-weight:500">✅ Adek</span>
+    </div>
+  </div>
+  <div style="margin-top:12px;display:flex;flex-wrap:wrap;align-items:center;column-gap:24px;row-gap:8px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="font-size:14px;color:#57534e">Porsi</span>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span style="height:32px;width:32px;border-radius:9999px;background:#fdecd2;color:#92400e;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center">−</span>
+        <span style="width:24px;text-align:center;font-weight:600;font-variant-numeric:tabular-nums">4</span>
+        <span style="height:32px;width:32px;border-radius:9999px;background:#fdecd2;color:#92400e;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center">+</span>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <span style="font-size:14px;color:#57534e">Jumlah lauk</span>
+      <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">2</span>
+      <span style="border-radius:9999px;border:1px solid #de5c08;background:#de5c08;color:#fff;padding:6px 12px;font-size:14px;font-weight:500">3</span>
+      <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">4</span>
+    </div>
+  </div>
+  <div style="margin-top:20px;border-radius:16px;background:#de5c08;padding:12px 20px;text-align:center;font-weight:600;font-size:18px;color:#fff;box-shadow:0 1px 2px rgba(0,0,0,.05)">🍽️ Kasih ide lain</div>
+  <div style="margin-top:16px">
+    <div style="margin-bottom:8px;display:flex;align-items:center;justify-content:space-between">
+      <span style="font-size:14px;font-weight:600;color:#78716c">Usulan menu</span>
+      <span style="border-radius:9999px;background:#fdecd2;padding:6px 12px;font-size:12px;font-weight:600;color:#b45309">🔀 Ganti semua</span>
+    </div>
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);overflow:hidden">
+      <div style="display:flex;align-items:center;gap:12px;padding:12px 16px">
+        <div style="min-width:0;flex:1">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.025em;color:#f19434">Lauk</span></div>
+          <div style="font-weight:600;color:#292524;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Ayam Goreng Lengkuas</div>
+          <div style="margin-top:2px;font-size:12px;color:#a8a29e">45 menit</div>
+        </div>
+        <span style="flex:none;border-radius:9999px;background:#fef7ec;padding:6px 12px;font-size:12px;font-weight:600;color:#b45309">🔄 Ganti</span>
+      </div>
+      <div style="border-top:1px solid #fef7ec;display:flex;align-items:center;gap:12px;padding:12px 16px">
+        <div style="min-width:0;flex:1">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.025em;color:#f19434">Sayur</span></div>
+          <div style="font-weight:600;color:#292524">Tumis Kangkung</div>
+          <div style="margin-top:2px;font-size:12px;color:#a8a29e">15 menit · cepat</div>
+        </div>
+        <span style="flex:none;border-radius:9999px;background:#fef7ec;padding:6px 12px;font-size:12px;font-weight:600;color:#b45309">🔄 Ganti</span>
+      </div>
+      <div style="border-top:1px solid #fef7ec;display:flex;align-items:center;gap:12px;padding:12px 16px">
+        <div style="min-width:0;flex:1">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.025em;color:#f19434">Pelengkap</span></div>
+          <div style="font-weight:600;color:#292524">Tempe Goreng</div>
+          <div style="margin-top:2px;font-size:12px;color:#a8a29e">20 menit · cepat</div>
+        </div>
+        <span style="flex:none;border-radius:9999px;background:#fef7ec;padding:6px 12px;font-size:12px;font-weight:600;color:#b45309">🔄 Ganti</span>
+      </div>
+      <div style="background:rgba(254,247,236,.6);padding:12px 16px">
+        <p style="margin:0;font-size:14px;line-height:1.375;color:#44403c">💡 Lauk gorengnya gurih, jadi sayurnya tumis yang seger biar seimbang. Cocok buat yang suka pedas.</p>
+        <div style="margin-top:8px;display:flex;flex-wrap:wrap;align-items:center;column-gap:16px;row-gap:4px;font-size:12px;color:#78716c">
+          <span>⏱️ total 80 menit</span><span>💰 Sedang</span><span>🔥 ± 620 kkal · 38 g protein / porsi</span>
+        </div>
+        <div style="margin-top:4px;font-size:10px;text-transform:uppercase;letter-spacing:.025em;color:#a8a29e">Nutrisi cuma perkiraan kasar</div>
+      </div>
+    </div>
+  </div>
+  <nav style="position:absolute;left:0;right:0;bottom:0;border-top:1px solid #fdecd2;background:rgba(255,255,255,.95);display:flex;padding:0 4px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#b45309"><span style="font-size:20px">🍚</span><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🗓️</span><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🧺</span><span>Ada Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">📖</span><span>Semua Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">👪</span><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+<!-- ============ 0b MINGGU INI ============ -->
+<div class="dv-opt" id="0b" data-screen-label="Minggu Ini (current)">
+<div class="dv-olabel"><a class="dv-oid" href="#0b">0b</a>Minggu Ini — weekly plan</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#fffbeb;position:relative;font-family:'Inter',system-ui,sans-serif;color:#3f2d1d;padding:16px 16px 96px">
+  <div style="margin-bottom:12px">
+    <h1 style="margin:0;font-size:24px;line-height:32px;font-weight:800;color:#92400e">Masak apa minggu ini?</h1>
+    <p style="margin:0;font-size:14px;line-height:20px;color:#78716c">Rencana Senin–Jumat yang seimbang. Protein diputar biar nggak bosan, bahan segar dipakai lintas hari biar hemat.</p>
+  </div>
+  <div style="border-radius:16px;background:#de5c08;padding:12px 20px;text-align:center;font-weight:600;color:#fff;box-shadow:0 1px 2px rgba(0,0,0,.05)">🔄 Susun ulang seminggu</div>
+  <div style="margin-top:16px;display:flex;flex-direction:column;gap:16px">
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);overflow:hidden">
+      <div style="display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #fef7ec;padding:10px 16px">
+        <span style="font-weight:700;color:#92400e">Senin</span>
+        <div style="display:flex;align-items:center;gap:4px">
+          <span style="border-radius:9999px;background:#de5c08;color:#fff;padding:4px 8px;font-size:12px;font-weight:600">🔒 Terkunci</span>
+          <span style="border-radius:9999px;background:#fef7ec;color:#b45309;padding:4px 8px;font-size:12px;font-weight:600">🔀 Ganti hari</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:12px 16px">
+        <div style="min-width:0;flex:1">
+          <span style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.025em;color:#f19434">Lauk</span>
+          <div style="font-weight:600;color:#292524">Ayam Goreng Bumbu Kuning</div>
+          <div style="margin-top:2px;font-size:12px;color:#a8a29e">45 menit</div>
+        </div>
+        <span style="flex:none;border-radius:9999px;background:#fef7ec;padding:6px 12px;font-size:12px;font-weight:600;color:#b45309">🔄 Ganti</span>
+      </div>
+      <div style="border-top:1px solid #fef7ec;display:flex;align-items:center;gap:12px;padding:12px 16px">
+        <div style="min-width:0;flex:1">
+          <span style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.025em;color:#f19434">Sayur</span>
+          <div style="font-weight:600;color:#292524">Sayur Bening Bayam</div>
+          <div style="margin-top:2px;font-size:12px;color:#a8a29e">20 menit · cepat</div>
+        </div>
+        <span style="flex:none;border-radius:9999px;background:#fef7ec;padding:6px 12px;font-size:12px;font-weight:600;color:#b45309">🔄 Ganti</span>
+      </div>
+      <div style="background:rgba(254,247,236,.6);padding:12px 16px">
+        <p style="margin:0;font-size:14px;line-height:1.375;color:#44403c">💡 Ayam bumbu kuning yang gurih ketemu bayam bening yang ringan.</p>
+        <div style="margin-top:8px;display:flex;flex-wrap:wrap;column-gap:16px;row-gap:4px;font-size:12px;color:#78716c"><span>⏱️ total 65 menit</span><span>💰 Sedang</span><span>🔥 ± 540 kkal · 32 g protein / porsi</span></div>
+        <div style="margin-top:4px;font-size:10px;text-transform:uppercase;letter-spacing:.025em;color:#a8a29e">Nutrisi cuma perkiraan kasar</div>
+      </div>
+    </div>
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);overflow:hidden">
+      <div style="display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #fef7ec;padding:10px 16px">
+        <span style="font-weight:700;color:#92400e">Selasa</span>
+        <div style="display:flex;align-items:center;gap:4px">
+          <span style="border-radius:9999px;background:#fef7ec;color:#b45309;padding:4px 8px;font-size:12px;font-weight:600">🔓 Kunci</span>
+          <span style="border-radius:9999px;background:#fef7ec;color:#b45309;padding:4px 8px;font-size:12px;font-weight:600">🔀 Ganti hari</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:12px 16px">
+        <div style="min-width:0;flex:1">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.025em;color:#f19434">Lauk</span><span style="border-radius:9999px;background:#fee2e2;color:#b91c1c;padding:2px 8px;font-size:12px;font-weight:500">pedas</span></div>
+          <div style="font-weight:600;color:#292524">Ikan Kembung Balado</div>
+          <div style="margin-top:2px;font-size:12px;color:#a8a29e">35 menit</div>
+        </div>
+        <span style="flex:none;border-radius:9999px;background:#fef7ec;padding:6px 12px;font-size:12px;font-weight:600;color:#b45309">🔄 Ganti</span>
+      </div>
+      <div style="border-top:1px solid #fef7ec;display:flex;align-items:center;gap:12px;padding:12px 16px">
+        <div style="min-width:0;flex:1">
+          <span style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.025em;color:#f19434">Sayur</span>
+          <div style="font-weight:600;color:#292524">Sayur Asem</div>
+          <div style="margin-top:2px;font-size:12px;color:#a8a29e">30 menit</div>
+        </div>
+        <span style="flex:none;border-radius:9999px;background:#fef7ec;padding:6px 12px;font-size:12px;font-weight:600;color:#b45309">🔄 Ganti</span>
+      </div>
+      <div style="background:rgba(254,247,236,.6);padding:12px 16px">
+        <p style="margin:0;font-size:14px;line-height:1.375;color:#44403c">💡 Balado yang nendang diimbangi sayur asem yang seger.</p>
+        <div style="margin-top:8px;display:flex;flex-wrap:wrap;column-gap:16px;row-gap:4px;font-size:12px;color:#78716c"><span>⏱️ total 65 menit</span><span>💰 Ekonomis</span><span>🔥 ± 480 kkal · 29 g protein / porsi</span></div>
+        <div style="margin-top:4px;font-size:10px;text-transform:uppercase;letter-spacing:.025em;color:#a8a29e">Nutrisi cuma perkiraan kasar</div>
+      </div>
+    </div>
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);overflow:hidden">
+      <div style="display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #fef7ec;padding:10px 16px">
+        <span style="font-weight:700;color:#92400e">Rabu</span>
+        <div style="display:flex;align-items:center;gap:4px">
+          <span style="border-radius:9999px;background:#fef7ec;color:#b45309;padding:4px 8px;font-size:12px;font-weight:600">🔓 Kunci</span>
+          <span style="border-radius:9999px;background:#fef7ec;color:#b45309;padding:4px 8px;font-size:12px;font-weight:600">🔀 Ganti hari</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:12px 16px">
+        <div style="min-width:0;flex:1">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.025em;color:#f19434">Lauk</span><span style="border-radius:9999px;background:#f5f5f4;color:#57534e;padding:2px 8px;font-size:12px;font-weight:500">santan</span></div>
+          <div style="font-weight:600;color:#292524">Opor Tahu Telur</div>
+          <div style="margin-top:2px;font-size:12px;color:#a8a29e">40 menit</div>
+        </div>
+        <span style="flex:none;border-radius:9999px;background:#fef7ec;padding:6px 12px;font-size:12px;font-weight:600;color:#b45309">🔄 Ganti</span>
+      </div>
+      <div style="border-top:1px solid #fef7ec;display:flex;align-items:center;gap:12px;padding:12px 16px">
+        <div style="min-width:0;flex:1">
+          <span style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.025em;color:#f19434">Sayur</span>
+          <div style="font-weight:600;color:#292524">Lalapan &amp; Sambal Terasi</div>
+          <div style="margin-top:2px;font-size:12px;color:#a8a29e">15 menit · cepat</div>
+        </div>
+        <span style="flex:none;border-radius:9999px;background:#fef7ec;padding:6px 12px;font-size:12px;font-weight:600;color:#b45309">🔄 Ganti</span>
+      </div>
+      <div style="background:rgba(254,247,236,.6);padding:12px 16px">
+        <p style="margin:0;font-size:14px;line-height:1.375;color:#44403c">💡 Opor yang bersantan dibikin ringan pakai lalapan seger.</p>
+        <div style="margin-top:8px;display:flex;flex-wrap:wrap;column-gap:16px;row-gap:4px;font-size:12px;color:#78716c"><span>⏱️ total 55 menit</span><span>💰 Ekonomis</span><span>🔥 ± 510 kkal · 26 g protein / porsi</span></div>
+        <div style="margin-top:4px;font-size:10px;text-transform:uppercase;letter-spacing:.025em;color:#a8a29e">Nutrisi cuma perkiraan kasar</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:20px;border-radius:16px;background:#de5c08;padding:12px 20px;text-align:center;font-weight:600;font-size:18px;color:#fff;box-shadow:0 1px 2px rgba(0,0,0,.05)">🛒 Buat Daftar Belanja</div>
+  <nav style="position:absolute;left:0;right:0;bottom:0;border-top:1px solid #fdecd2;background:rgba(255,255,255,.95);display:flex;padding:0 4px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🍚</span><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#b45309"><span style="font-size:20px">🗓️</span><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🧺</span><span>Ada Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">📖</span><span>Semua Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">👪</span><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+<!-- ============ 0c DAFTAR BELANJA ============ -->
+<div class="dv-opt" id="0c" data-screen-label="Daftar Belanja (current)">
+<div class="dv-olabel"><a class="dv-oid" href="#0c">0c</a>Daftar Belanja — shopping list</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#fffbeb;position:relative;font-family:'Inter',system-ui,sans-serif;color:#3f2d1d;padding:16px 16px 96px">
+  <div style="margin-bottom:12px">
+    <h1 style="margin:0;font-size:24px;line-height:32px;font-weight:800;color:#92400e">Daftar Belanja</h1>
+    <p style="margin:0;font-size:14px;line-height:20px;color:#78716c">Dari menu minggu ini · untuk 4 porsi · 9 item belum dicoret. Bumbu dapur pokok (garam, minyak, kecap) nggak dimasukin.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);overflow:hidden">
+      <div style="border-bottom:1px solid #fef7ec;background:rgba(254,247,236,.6);padding:8px 16px;font-size:14px;font-weight:700;color:#b45309">Sayuran &amp; Bumbu Segar</div>
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 16px">
+        <span style="height:24px;width:24px;flex:none;border-radius:9999px;border:2px solid #22c55e;background:#22c55e;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center">✓</span>
+        <div style="min-width:0;flex:1;opacity:.4;text-decoration:line-through">
+          <div style="font-weight:500;color:#292524">kangkung</div>
+          <div style="font-size:12px;color:#a8a29e">2 ikat</div>
+        </div>
+      </div>
+      <div style="border-top:1px solid #fef7ec;display:flex;align-items:center;gap:12px;padding:10px 16px">
+        <span style="height:24px;width:24px;flex:none;border-radius:9999px;border:2px solid #f6bb6d;color:transparent;font-size:12px;display:flex;align-items:center;justify-content:center">✓</span>
+        <div style="min-width:0;flex:1"><div style="font-weight:500;color:#292524">bayam</div><div style="font-size:12px;color:#a8a29e">2 ikat</div></div>
+      </div>
+      <div style="border-top:1px solid #fef7ec;display:flex;align-items:center;gap:12px;padding:10px 16px">
+        <span style="height:24px;width:24px;flex:none;border-radius:9999px;border:2px solid #f6bb6d;color:transparent;font-size:12px;display:flex;align-items:center;justify-content:center">✓</span>
+        <div style="min-width:0;flex:1"><div style="font-weight:500;color:#292524">cabai merah</div><div style="font-size:12px;color:#a8a29e">150 gr</div></div>
+      </div>
+      <div style="border-top:1px solid #fef7ec;display:flex;align-items:center;gap:12px;padding:10px 16px">
+        <span style="height:24px;width:24px;flex:none;border-radius:9999px;border:2px solid #f6bb6d;color:transparent;font-size:12px;display:flex;align-items:center;justify-content:center">✓</span>
+        <div style="min-width:0;flex:1"><div style="font-weight:500;color:#292524">bawang merah</div><div style="font-size:12px;color:#a8a29e">1/4 kg</div></div>
+      </div>
+    </div>
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);overflow:hidden">
+      <div style="border-bottom:1px solid #fef7ec;background:rgba(254,247,236,.6);padding:8px 16px;font-size:14px;font-weight:700;color:#b45309">Protein</div>
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 16px">
+        <span style="height:24px;width:24px;flex:none;border-radius:9999px;border:2px solid #f6bb6d;color:transparent;font-size:12px;display:flex;align-items:center;justify-content:center">✓</span>
+        <div style="min-width:0;flex:1"><div style="font-weight:500;color:#292524">ayam</div><div style="font-size:12px;color:#a8a29e">800 gr</div></div>
+      </div>
+      <div style="border-top:1px solid #fef7ec;display:flex;align-items:center;gap:12px;padding:10px 16px">
+        <span style="height:24px;width:24px;flex:none;border-radius:9999px;border:2px solid #f6bb6d;color:transparent;font-size:12px;display:flex;align-items:center;justify-content:center">✓</span>
+        <div style="min-width:0;flex:1"><div style="font-weight:500;color:#292524">ikan kembung</div><div style="font-size:12px;color:#a8a29e">4 ekor</div></div>
+      </div>
+      <div style="border-top:1px solid #fef7ec;display:flex;align-items:center;gap:12px;padding:10px 16px">
+        <span style="height:24px;width:24px;flex:none;border-radius:9999px;border:2px solid #f6bb6d;color:transparent;font-size:12px;display:flex;align-items:center;justify-content:center">✓</span>
+        <div style="min-width:0;flex:1">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-weight:500;color:#292524">tahu</span></div>
+          <div style="font-size:12px;color:#a8a29e">2 papan</div>
+        </div>
+      </div>
+    </div>
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);overflow:hidden">
+      <div style="border-bottom:1px solid #fef7ec;background:rgba(254,247,236,.6);padding:8px 16px;font-size:14px;font-weight:700;color:#b45309">Bumbu Dapur</div>
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 16px">
+        <span style="height:24px;width:24px;flex:none;border-radius:9999px;border:2px solid #f6bb6d;color:transparent;font-size:12px;display:flex;align-items:center;justify-content:center">✓</span>
+        <div style="min-width:0;flex:1"><div style="font-weight:500;color:#292524">santan instan</div><div style="font-size:12px;color:#a8a29e">200 ml</div></div>
+      </div>
+      <div style="border-top:1px solid #fef7ec;display:flex;align-items:center;gap:12px;padding:10px 16px">
+        <span style="height:24px;width:24px;flex:none;border-radius:9999px;border:2px solid #f6bb6d;color:transparent;font-size:12px;display:flex;align-items:center;justify-content:center">✓</span>
+        <div style="min-width:0;flex:1">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-weight:500;color:#292524">terasi</span><span style="border-radius:9999px;background:#f5f5f4;color:#57534e;padding:2px 8px;font-size:12px;font-weight:500">supermarket</span></div>
+          <div style="font-size:12px;color:#a8a29e">1 bungkus kecil</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:20px;border-radius:16px;background:#de5c08;padding:12px 20px;text-align:center;font-weight:600;font-size:18px;color:#fff;box-shadow:0 10px 15px -3px rgba(0,0,0,.1)">💬 Salin untuk WhatsApp</div>
+  <nav style="position:absolute;left:0;right:0;bottom:0;border-top:1px solid #fdecd2;background:rgba(255,255,255,.95);display:flex;padding:0 4px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🍚</span><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#b45309"><span style="font-size:20px">🗓️</span><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🧺</span><span>Ada Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">📖</span><span>Semua Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">👪</span><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+<!-- ============ 0d ADA BAHAN ============ -->
+<div class="dv-opt" id="0d" data-screen-label="Ada Bahan (current)">
+<div class="dv-olabel"><a class="dv-oid" href="#0d">0d</a>Ada Bahan Apa? — pantry mode</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#fffbeb;position:relative;font-family:'Inter',system-ui,sans-serif;color:#3f2d1d;padding:16px 16px 96px">
+  <div style="margin-bottom:12px">
+    <h1 style="margin:0;font-size:24px;line-height:32px;font-weight:800;color:#92400e">Ada bahan apa?</h1>
+    <p style="margin:0;font-size:14px;line-height:20px;color:#78716c">Ketik bahan yang ada di kulkas/dapur. Kami carikan menu yang paling cocok dengan stok kamu.</p>
+  </div>
+  <div style="border-radius:16px;border:1px solid #fad7a5;background:#fff;padding:12px 16px;font-size:16px;color:#a8a29e">Cari bahan… mis. ayam, kangkung, telur</div>
+  <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px">
+    <span style="border-radius:9999px;background:#fdecd2;padding:6px 12px;font-size:14px;font-weight:500;color:#92400e">ayam ✕</span>
+    <span style="border-radius:9999px;background:#fdecd2;padding:6px 12px;font-size:14px;font-weight:500;color:#92400e">kangkung ✕</span>
+    <span style="border-radius:9999px;background:#fdecd2;padding:6px 12px;font-size:14px;font-weight:500;color:#92400e">telur ✕</span>
+  </div>
+  <div style="margin-top:20px;display:flex;flex-direction:column;gap:12px">
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);padding:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <span style="font-weight:600;color:#292524">Tumis Kangkung</span>
+        <span style="border-radius:9999px;background:#dcfce7;color:#166534;padding:2px 8px;font-size:12px;font-weight:500">Bahan cukup 90%</span>
+      </div>
+      <div style="margin-top:4px;font-size:12px;color:#a8a29e">15 menit · cepat · Ekonomis</div>
+      <div style="margin-top:6px;font-size:14px;font-weight:500;color:#15803d">Semua bahan (non-pokok) sudah ada! 🎉</div>
+    </div>
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);padding:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <span style="font-weight:600;color:#292524">Ayam Goreng Lengkuas</span>
+        <span style="border-radius:9999px;background:#dcfce7;color:#166534;padding:2px 8px;font-size:12px;font-weight:500">Bahan cukup 75%</span>
+      </div>
+      <div style="margin-top:4px;font-size:12px;color:#a8a29e">45 menit · Sedang</div>
+      <div style="margin-top:6px;font-size:14px;color:#57534e">Tinggal beli: lengkuas, ketumbar, daun salam.</div>
+    </div>
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);padding:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <span style="font-weight:600;color:#292524">Telur Balado</span>
+        <span style="border-radius:9999px;background:#fdecd2;color:#92400e;padding:2px 8px;font-size:12px;font-weight:500">Bahan cukup 55%</span>
+      </div>
+      <div style="margin-top:4px;font-size:12px;color:#a8a29e">25 menit · Ekonomis</div>
+      <div style="margin-top:6px;font-size:14px;color:#57534e">Tinggal beli: cabai merah, tomat, bawang merah.</div>
+    </div>
+  </div>
+  <nav style="position:absolute;left:0;right:0;bottom:0;border-top:1px solid #fdecd2;background:rgba(255,255,255,.95);display:flex;padding:0 4px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🍚</span><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🗓️</span><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#b45309"><span style="font-size:20px">🧺</span><span>Ada Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">📖</span><span>Semua Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">👪</span><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+<!-- ============ 0e SEMUA MENU ============ -->
+<div class="dv-opt" id="0e" data-screen-label="Semua Menu (current)">
+<div class="dv-olabel"><a class="dv-oid" href="#0e">0e</a>Semua Menu — catalog</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#fffbeb;position:relative;font-family:'Inter',system-ui,sans-serif;color:#3f2d1d;padding:16px 16px 96px">
+  <div style="margin-bottom:12px">
+    <h1 style="margin:0;font-size:24px;line-height:32px;font-weight:800;color:#92400e">Semua Menu</h1>
+    <p style="margin:0;font-size:14px;line-height:20px;color:#78716c">335 resep rumahan. Cari atau saring.</p>
+  </div>
+  <div style="border-radius:16px;border:1px solid #fad7a5;background:#fff;padding:12px 16px;font-size:16px;color:#a8a29e">Cari nama menu… mis. gulai, tumis, telur</div>
+  <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+    <div style="display:flex;gap:8px;overflow:hidden;padding-bottom:4px">
+      <span style="white-space:nowrap;border-radius:9999px;border:1px solid #de5c08;background:#de5c08;color:#fff;padding:6px 12px;font-size:14px;font-weight:500">Semua jenis</span>
+      <span style="white-space:nowrap;border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">Lauk utama</span>
+      <span style="white-space:nowrap;border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">Sayur</span>
+      <span style="white-space:nowrap;border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">Pelengkap</span>
+    </div>
+    <div style="display:flex;gap:8px;overflow:hidden;padding-bottom:4px">
+      <span style="white-space:nowrap;border-radius:9999px;border:1px solid #de5c08;background:#de5c08;color:#fff;padding:6px 12px;font-size:14px;font-weight:500">Semua masakan</span>
+      <span style="white-space:nowrap;border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">Indonesia</span>
+      <span style="white-space:nowrap;border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">Chinese</span>
+      <span style="white-space:nowrap;border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">Western</span>
+    </div>
+    <div style="display:flex;gap:8px;overflow:hidden;padding-bottom:4px">
+      <span style="white-space:nowrap;border-radius:9999px;border:1px solid #de5c08;background:#de5c08;color:#fff;padding:6px 12px;font-size:14px;font-weight:500">Semua protein</span>
+      <span style="white-space:nowrap;border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">Ayam</span>
+      <span style="white-space:nowrap;border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">Ikan</span>
+      <span style="white-space:nowrap;border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">Telur</span>
+    </div>
+  </div>
+  <div style="margin-top:12px;font-size:12px;color:#a8a29e">335 menu ditemukan</div>
+  <div style="margin-top:8px;display:flex;flex-direction:column;gap:8px">
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);padding:12px;display:flex;align-items:center;gap:12px">
+      <div style="height:48px;width:48px;flex:none;border-radius:12px;background:#fdecd2;font-size:24px;display:flex;align-items:center;justify-content:center">🍲</div>
+      <div style="min-width:0;flex:1">
+        <div style="display:flex;align-items:center;gap:6px"><span style="font-weight:600;color:#292524;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Ayam Goreng Lengkuas</span><span>❤️</span></div>
+        <div style="font-size:12px;color:#a8a29e">Lauk utama · 45 menit · Sedang</div>
+      </div>
+    </div>
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);padding:12px;display:flex;align-items:center;gap:12px">
+      <div style="height:48px;width:48px;flex:none;border-radius:12px;background:#fdecd2;font-size:24px;display:flex;align-items:center;justify-content:center">🍲</div>
+      <div style="min-width:0;flex:1">
+        <div style="font-weight:600;color:#292524">Ayam Goreng Kalasan</div>
+        <div style="font-size:12px;color:#a8a29e">Lauk utama · 60 menit · agak lama · Sedang</div>
+      </div>
+    </div>
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);padding:12px;display:flex;align-items:center;gap:12px">
+      <div style="height:48px;width:48px;flex:none;border-radius:12px;background:#fdecd2;font-size:24px;display:flex;align-items:center;justify-content:center">🍲</div>
+      <div style="min-width:0;flex:1">
+        <div style="font-weight:600;color:#292524">Ayam Goreng Serundeng</div>
+        <div style="font-size:12px;color:#a8a29e">Lauk utama · 55 menit · agak lama · Sedang</div>
+      </div>
+      <span style="border-radius:9999px;background:#fee2e2;color:#b91c1c;padding:2px 8px;font-size:12px;font-weight:500">pedas</span>
+    </div>
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);padding:12px;display:flex;align-items:center;gap:12px">
+      <div style="height:48px;width:48px;flex:none;border-radius:12px;background:#fdecd2;font-size:24px;display:flex;align-items:center;justify-content:center">🍲</div>
+      <div style="min-width:0;flex:1">
+        <div style="display:flex;align-items:center;gap:6px"><span style="font-weight:600;color:#292524">Ayam Goreng Bumbu Kuning</span><span>🚫</span></div>
+        <div style="font-size:12px;color:#a8a29e">Lauk utama · 45 menit · Sedang</div>
+      </div>
+    </div>
+  </div>
+  <nav style="position:absolute;left:0;right:0;bottom:0;border-top:1px solid #fdecd2;background:rgba(255,255,255,.95);display:flex;padding:0 4px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🍚</span><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🗓️</span><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🧺</span><span>Ada Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#b45309"><span style="font-size:20px">📖</span><span>Semua Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">👪</span><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+<!-- ============ 0f MENU DETAIL ============ -->
+<div class="dv-opt" id="0f" data-screen-label="Menu Detail (current)">
+<div class="dv-olabel"><a class="dv-oid" href="#0f">0f</a>Menu Detail</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#fffbeb;position:relative;font-family:'Inter',system-ui,sans-serif;color:#3f2d1d;padding:0 0 16px">
+  <div style="position:relative;height:176px;display:flex;align-items:center;justify-content:center;background:linear-gradient(to bottom right,#fad7a5,#f19434);font-size:60px">
+    🍽️
+    <span style="position:absolute;left:12px;top:12px;border-radius:9999px;background:rgba(255,255,255,.8);padding:6px 12px;font-size:14px;font-weight:600;color:#92400e">← Kembali</span>
+  </div>
+  <div style="padding:0 16px">
+    <h1 style="margin:16px 0 0;font-size:24px;line-height:32px;font-weight:800;color:#92400e">Ayam Goreng Kalasan</h1>
+    <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:6px">
+      <span style="border-radius:9999px;background:#fdecd2;color:#92400e;padding:2px 8px;font-size:12px;font-weight:500">Lauk utama</span>
+      <span style="border-radius:9999px;background:#f5f5f4;color:#57534e;padding:2px 8px;font-size:12px;font-weight:500">Ayam</span>
+      <span style="border-radius:9999px;background:#f5f5f4;color:#57534e;padding:2px 8px;font-size:12px;font-weight:500">Goreng</span>
+      <span style="border-radius:9999px;background:#f5f5f4;color:#57534e;padding:2px 8px;font-size:12px;font-weight:500">bersantan</span>
+    </div>
+    <div style="margin-top:12px;display:flex;flex-wrap:wrap;column-gap:16px;row-gap:4px;font-size:14px;color:#78716c">
+      <span>⏱️ 60 menit · agak lama</span><span>🎚️ Sedang</span><span>💰 Sedang</span>
+    </div>
+    <div style="margin-top:16px;display:flex;gap:8px">
+      <span style="flex:1;border-radius:16px;background:#fef2f2;color:#dc2626;padding:10px 0;font-size:14px;font-weight:600;text-align:center">🤍 Jadikan favorit</span>
+      <span style="flex:1;border-radius:16px;background:#f5f5f4;color:#57534e;padding:10px 0;font-size:14px;font-weight:600;text-align:center">🚫 Jangan tawarin lagi</span>
+    </div>
+    <div style="margin-top:20px;border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);padding:16px">
+      <h2 style="margin:0 0 8px;font-size:16px;font-weight:700;color:#b45309">Bahan (per porsi)</h2>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:14px">
+        <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#44403c">ayam</span><span style="flex:none;color:#a8a29e">200 gr</span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#44403c">santan kelapa</span><span style="flex:none;color:#a8a29e">100 ml</span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#44403c">gula merah</span><span style="flex:none;color:#a8a29e">1 sdm</span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#44403c">bawang putih</span><span style="flex:none;color:#a8a29e">3 siung</span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#44403c">ketumbar</span><span style="flex:none;color:#a8a29e">1 sdt</span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#44403c">lengkuas</span><span style="flex:none;color:#a8a29e">2 cm</span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#44403c">daun salam</span><span style="flex:none;color:#a8a29e">2 lembar</span></div>
+      </div>
+      <p style="margin:12px 0 0;font-size:12px;color:#a8a29e">Bumbu pokok (dianggap selalu ada): garam.</p>
+    </div>
+    <div style="margin-top:16px;border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);padding:16px">
+      <h2 style="margin:0 0 8px;font-size:16px;font-weight:700;color:#b45309">Cara masak</h2>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+        <div style="display:flex;gap:12px"><span style="height:24px;width:24px;flex:none;border-radius:9999px;background:#fdecd2;color:#b45309;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="color:#44403c">Haluskan bawang putih, ketumbar, dan lengkuas.</span></div>
+        <div style="display:flex;gap:12px"><span style="height:24px;width:24px;flex:none;border-radius:9999px;background:#fdecd2;color:#b45309;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="color:#44403c">Ungkep ayam bersama bumbu, santan, gula merah, daun salam, dan garam.</span></div>
+        <div style="display:flex;gap:12px"><span style="height:24px;width:24px;flex:none;border-radius:9999px;background:#fdecd2;color:#b45309;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#44403c">Masak api kecil sampai bumbu meresap dan kuah menyusut, sekitar 40 menit.</span></div>
+        <div style="display:flex;gap:12px"><span style="height:24px;width:24px;flex:none;border-radius:9999px;background:#fdecd2;color:#b45309;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center">4</span><span style="color:#44403c">Goreng ayam sebentar sampai kecokelatan.</span></div>
+        <div style="display:flex;gap:12px"><span style="height:24px;width:24px;flex:none;border-radius:9999px;background:#fdecd2;color:#b45309;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center">5</span><span style="color:#44403c">Sajikan dengan sisa bumbu ungkep yang dikentalkan.</span></div>
+      </div>
+    </div>
+    <div style="margin-top:16px;border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);padding:16px">
+      <h2 style="margin:0 0 4px;font-size:16px;font-weight:700;color:#b45309">Nutrisi</h2>
+      <div style="display:flex;gap:24px;font-size:14px;color:#57534e"><span>± 380 kkal/porsi</span><span>± 27 g protein/porsi</span></div>
+      <p style="margin:4px 0 0;font-size:12px;text-transform:uppercase;letter-spacing:.025em;color:#a8a29e">Perkiraan kasar — bukan angka pasti</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- ============ 0g KELUARGA ============ -->
+<div class="dv-opt" id="0g" data-screen-label="Keluarga (current)">
+<div class="dv-olabel"><a class="dv-oid" href="#0g">0g</a>Keluarga — household settings</div>
+<div class="dv-card" style="width:390px">
+<div style="background:#fffbeb;position:relative;font-family:'Inter',system-ui,sans-serif;color:#3f2d1d;padding:16px 16px 96px">
+  <div style="margin-bottom:8px">
+    <h1 style="margin:0;font-size:24px;line-height:32px;font-weight:800;color:#92400e">Keluarga</h1>
+    <p style="margin:0;font-size:14px;line-height:20px;color:#78716c">Isi seperlunya aja. Alergi jadi filter wajib; nggak-suka cuma bikin menu itu jarang muncul. Semua opsional.</p>
+  </div>
+  <div style="margin:20px 0 8px;display:flex;align-items:baseline;justify-content:space-between"><h2 style="margin:0;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.025em;color:#b45309">Anggota</h2></div>
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);padding:16px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:center;gap:8px">
+        <div style="min-width:0;flex:1;border-radius:12px;border:1px solid #fad7a5;padding:8px 12px;font-weight:600">Ibu</div>
+        <span style="border-radius:12px;background:#fef2f2;color:#dc2626;padding:8px 12px;font-size:14px;font-weight:600">Hapus</span>
+      </div>
+      <div>
+        <div style="margin-bottom:4px;font-size:12px;font-weight:600;color:#78716c">Umur</div>
+        <div style="display:flex;gap:8px">
+          <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">Anak</span>
+          <span style="border-radius:9999px;border:1px solid #de5c08;background:#de5c08;color:#fff;padding:6px 12px;font-size:14px;font-weight:500">Dewasa</span>
+          <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">Lansia</span>
+        </div>
+      </div>
+      <div>
+        <div style="margin-bottom:4px;font-size:12px;font-weight:600;color:#78716c">Tahan pedas: Sedang</div>
+        <div style="display:flex;gap:8px">
+          <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">🚫</span>
+          <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">🌶️</span>
+          <span style="border-radius:9999px;border:1px solid #de5c08;background:#de5c08;color:#fff;padding:6px 12px;font-size:14px;font-weight:500">🌶️🌶️</span>
+          <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">🌶️🌶️🌶️</span>
+        </div>
+      </div>
+      <div>
+        <div style="margin-bottom:4px;font-size:12px;font-weight:600;color:#78716c">Alergi (filter wajib)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="border-radius:9999px;background:#fef2f2;color:#b91c1c;padding:4px 10px;font-size:12px;font-weight:500">udang ✕</span></div>
+        <div style="margin-top:6px;display:flex;gap:8px">
+          <div style="min-width:0;flex:1;border-radius:12px;border:1px solid #fad7a5;padding:8px 12px;font-size:14px;color:#a8a29e">mis. udang, telur</div>
+          <span style="border-radius:12px;background:#fdecd2;color:#b45309;padding:8px 12px;font-size:14px;font-weight:600;display:flex;align-items:center">Tambah</span>
+        </div>
+      </div>
+      <div>
+        <div style="margin-bottom:4px;font-size:12px;font-weight:600;color:#78716c">Nggak suka (pengurang skor)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="border-radius:9999px;background:#fef2f2;color:#b91c1c;padding:4px 10px;font-size:12px;font-weight:500">pare ✕</span></div>
+        <div style="margin-top:6px;display:flex;gap:8px">
+          <div style="min-width:0;flex:1;border-radius:12px;border:1px solid #fad7a5;padding:8px 12px;font-size:14px;color:#a8a29e">mis. pare, jengkol</div>
+          <span style="border-radius:12px;background:#fdecd2;color:#b45309;padding:8px 12px;font-size:14px;font-weight:600;display:flex;align-items:center">Tambah</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:12px;border-radius:16px;border:2px dashed #f6bb6d;padding:12px 0;text-align:center;font-size:14px;font-weight:600;color:#de5c08">+ Tambah anggota</div>
+  <div style="margin:20px 0 8px"><h2 style="margin:0;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.025em;color:#b45309">Pengaturan Masak</h2></div>
+  <div style="border-radius:16px;background:#fff;box-shadow:0 0 0 1px #fdecd2,0 1px 2px rgba(0,0,0,.05);padding:16px;display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <span style="font-size:14px;color:#57534e">Porsi default</span>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span style="height:32px;width:32px;border-radius:9999px;background:#fdecd2;color:#92400e;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center">−</span>
+        <span style="width:24px;text-align:center;font-weight:600">4</span>
+        <span style="height:32px;width:32px;border-radius:9999px;background:#fdecd2;color:#92400e;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center">+</span>
+      </div>
+    </div>
+    <div>
+      <div style="margin-bottom:4px;font-size:14px;color:#57534e">Jumlah lauk per makan</div>
+      <div style="display:flex;gap:8px">
+        <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">2 · lauk+sayur</span>
+        <span style="border-radius:9999px;border:1px solid #de5c08;background:#de5c08;color:#fff;padding:6px 12px;font-size:14px;font-weight:500">3 · +pelengkap</span>
+        <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">4 · +sup</span>
+      </div>
+    </div>
+    <div>
+      <div style="margin-bottom:4px;font-size:14px;color:#57534e">Batas waktu masak hari kerja: 60 menit</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">30 menit</span>
+        <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">45 menit</span>
+        <span style="border-radius:9999px;border:1px solid #de5c08;background:#de5c08;color:#fff;padding:6px 12px;font-size:14px;font-weight:500">60 menit</span>
+        <span style="border-radius:9999px;border:1px solid #fad7a5;background:#fff;color:#92400e;padding:6px 12px;font-size:14px;font-weight:500">90 menit</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin:20px 0 8px;border-radius:16px;background:#f5f5f4;padding:10px 0;text-align:center;font-size:14px;font-weight:500;color:#78716c">Reset semua data</div>
+  <nav style="position:absolute;left:0;right:0;bottom:0;border-top:1px solid #fdecd2;background:rgba(255,255,255,.95);display:flex;padding:0 4px">
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🍚</span><span>Hari Ini</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🗓️</span><span>Minggu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">🧺</span><span>Ada Bahan</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#a8a29e"><span style="font-size:20px">📖</span><span>Semua Menu</span></span>
+    <span style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;font-size:11px;font-weight:500;color:#b45309"><span style="font-size:20px">👪</span><span>Keluarga</span></span>
+  </nav>
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">This is the faithful baseline from your code. Makeover directions will appear in a new turn above this one.</p>
+</section>
+
+</x-dc>
+</body>
+</html>

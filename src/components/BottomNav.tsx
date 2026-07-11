@@ -1,39 +1,38 @@
 import { NavLink } from "react-router-dom";
+import { BasketIcon, BookIcon, BowlIcon, CalendarIcon, PeopleIcon } from "./icons";
 
 const TABS = [
-  { to: "/", label: "Hari Ini", emoji: "🍚", end: true },
-  { to: "/minggu", label: "Minggu", emoji: "🗓️", end: false },
-  { to: "/bahan", label: "Ada Bahan", emoji: "🧺", end: false },
-  { to: "/menu", label: "Semua Menu", emoji: "📖", end: false },
-  { to: "/keluarga", label: "Keluarga", emoji: "👪", end: false }
+  { to: "/", label: "Hari Ini", Icon: BowlIcon, end: true },
+  { to: "/minggu", label: "Minggu", Icon: CalendarIcon, end: false },
+  { to: "/bahan", label: "Bahan", Icon: BasketIcon, end: false },
+  { to: "/menu", label: "Menu", Icon: BookIcon, end: false },
+  { to: "/keluarga", label: "Keluarga", Icon: PeopleIcon, end: false }
 ];
 
 export default function BottomNav() {
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-warm-100 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-md items-stretch justify-around px-1 pb-[env(safe-area-inset-bottom)]">
-        {TABS.map((t) => (
-          <NavLink
-            key={t.to}
-            to={t.to}
-            end={t.end}
-            className={({ isActive }) =>
-              `flex flex-1 flex-col items-center gap-0.5 py-2 text-[11px] font-medium ${
-                isActive ? "text-warm-700" : "text-stone-400"
-              }`
-            }
-          >
-            {({ isActive }) => (
-              <>
-                <span className={`text-xl transition ${isActive ? "scale-110" : ""}`}>
-                  {t.emoji}
-                </span>
-                <span>{t.label}</span>
-              </>
-            )}
-          </NavLink>
-        ))}
+    <div className="fixed inset-x-0 bottom-0 z-20">
+      <div className="mx-auto max-w-md px-3 pb-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
+        <nav className="flex rounded-3xl border border-border bg-surface p-1.5 shadow-nav">
+          {TABS.map(({ to, label, Icon, end }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={end}
+              className={({ isActive }) =>
+                `flex flex-1 flex-col items-center gap-[3px] rounded-[18px] py-[7px] text-[10.5px] ${
+                  isActive
+                    ? "bg-tint font-bold text-primary"
+                    : "font-semibold text-nav"
+                }`
+              }
+            >
+              <Icon size={21} strokeWidth={2} />
+              <span>{label}</span>
+            </NavLink>
+          ))}
+        </nav>
       </div>
-    </nav>
+    </div>
   );
 }

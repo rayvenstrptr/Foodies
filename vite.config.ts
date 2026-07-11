@@ -21,8 +21,8 @@ export default defineConfig({
         short_name: "MasakApa",
         description:
           "Jawaban buat pertanyaan 'masak apa hari ini?' — inspirasi menu rumahan Indonesia yang seimbang.",
-        theme_color: "#b45309",
-        background_color: "#fffbeb",
+        theme_color: "#b8502e",
+        background_color: "#faf3e7",
         display: "standalone",
         orientation: "portrait",
         lang: "id",

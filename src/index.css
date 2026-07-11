@@ -1,27 +1,62 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-  /* Warm kitchen palette */
-  --color-cream: #fffbeb;
-  --color-warm-50: #fef7ec;
-  --color-warm-100: #fdecd2;
-  --color-warm-200: #fad7a5;
-  --color-warm-300: #f6bb6d;
-  --color-warm-400: #f19434;
-  --color-warm-500: #ed7712;
-  --color-warm-600: #de5c08;
-  --color-warm-700: #b45309;
-  --color-warm-800: #92400e;
-  --color-warm-900: #78350f;
-  --color-leaf-600: #16a34a;
-  --color-leaf-700: #15803d;
+  /* ===== Dapur Hangat palette ===== */
+  /* Surfaces */
+  --color-page: #faf3e7; /* warm cream page background */
+  --color-surface: #fffdf8; /* card surface */
+  --color-tint: #f9efdd; /* tinted section / card header */
+  --color-thumb: #f3e5cd; /* chip / thumb tint */
+
+  /* Lines */
+  --color-border: #efe0c8; /* card border */
+  --color-border-input: #e9d7bc; /* input / chip border */
+  --color-divider: #f5ead6; /* inner divider */
+  --color-dashed: #dcc79f; /* dashed dividers / borders */
+
+  /* Brand */
+  --color-primary: #b8502e; /* terracotta */
+  --color-primary-press: #a64627; /* pressed terracotta */
+  --color-on-primary: #fff8ef; /* text on primary */
+  --color-heading: #7a3c1e; /* deep heading accent */
+
+  /* Ink & text */
+  --color-ink: #33251a; /* headings / body */
+  --color-ink-2: #6b4c33; /* secondary text */
+  --color-body: #4d3a26; /* long-form body */
+  --color-muted: #8a6d4c; /* body-muted */
+  --color-muted-2: #9c7c56; /* meta text */
+  --color-faint: #b08a5e; /* faint */
+  --color-faint-2: #a3814f; /* faint alt */
+  --color-nav: #ab8f6b; /* inactive nav */
+
+  /* Green (vegetables / success) */
+  --color-leaf: #5c7d4a;
+  --color-leaf-tint: #e5eedd;
+  --color-leaf-tint-2: #dde8d2;
+  --color-match-mid: #8fa76b;
+  --color-match-low: #d9a441;
+
+  /* Spicy tag */
+  --color-spicy-bg: #fbe3dc;
+  --color-spicy-text: #a63d20;
+
+  /* Dark chip (selected ingredient / protein) */
+  --color-dark: #33251a;
+
+  /* Elevation */
+  --shadow-card: 0 2px 8px rgba(139, 90, 43, 0.06);
+  --shadow-nav: 0 8px 24px rgba(139, 90, 43, 0.12);
+  --shadow-hero: 0 8px 24px rgba(139, 90, 43, 0.1);
+  --shadow-btn: 0 6px 16px rgba(184, 80, 46, 0.3);
+  --shadow-btn-sm: 0 6px 16px rgba(184, 80, 46, 0.25);
 }
 
 html {
-  background: var(--color-cream);
+  background: var(--color-page);
 }
 
 body {
@@ -29,5 +64,29 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
-  color: #3f2d1d;
+  color: var(--color-ink);
+}
+
+/* Warm striped placeholder for menus without a photo (lauk / pelengkap). */
+.photo-fallback-warm {
+  background: repeating-linear-gradient(
+    45deg,
+    #f3e5cd,
+    #f3e5cd 6px,
+    #eeddc0 6px,
+    #eeddc0 12px
+  );
+  color: #a3814f;
+}
+
+/* Green striped placeholder for vegetable / soup menus. */
+.photo-fallback-veg {
+  background: repeating-linear-gradient(
+    45deg,
+    #e5eedd,
+    #e5eedd 6px,
+    #dde8d2 6px,
+    #dde8d2 12px
+  );
+  color: #75885f;
 }

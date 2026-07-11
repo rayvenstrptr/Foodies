@@ -12,7 +12,7 @@ import MenuDetail from "./screens/MenuDetail";
 export default function App() {
   return (
     <StoreProvider>
-      <div className="mx-auto min-h-screen max-w-md bg-cream pb-24">
+      <div className="mx-auto min-h-screen max-w-md bg-page pb-[110px]">
         <Routes>
           <Route path="/" element={<HariIni />} />
           <Route path="/minggu" element={<MingguIni />} />
