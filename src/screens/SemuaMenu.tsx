@@ -9,7 +9,8 @@ import {
   PROTEIN_LABEL
 } from "../lib/format";
 import { useStore } from "../lib/store";
-import { Card, GhostButton, Tag } from "../components/ui";
+import { Chip, isVegCategory, ScreenHeader, Thumb } from "../components/ui";
+import { BanIcon, HeartIcon, SearchIcon } from "../components/icons";
 
 const CUISINE_LABEL: Record<Cuisine, string> = {
   indonesia: "Indonesia",
@@ -38,86 +39,132 @@ export default function SemuaMenu() {
   }, [q, cat, cui, pro]);
 
   return (
-    <div className="px-4 pt-4">
-      <header className="mb-3">
-        <h1 className="text-2xl font-extrabold text-warm-800">Semua Menu</h1>
-        <p className="text-sm text-stone-500">{MENUS.length} resep rumahan. Cari atau saring.</p>
-      </header>
+    <div className="px-5 pt-5">
+      <ScreenHeader kicker={`${MENUS.length} resep rumahan 📖`} title="Semua Menu" />
 
-      <input
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-        placeholder="Cari nama menu… mis. gulai, tumis, telur"
-        className="w-full rounded-2xl border border-warm-200 bg-white px-4 py-3 outline-none focus:border-warm-500"
-      />
+      {/* Pill search */}
+      <div className="mt-3.5 flex items-center gap-2.5 rounded-full border border-border-input bg-surface px-4.5 py-3.5">
+        <SearchIcon size={18} className="shrink-0 text-faint" />
+        <input
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="Cari nama menu… mis. gulai, tumis"
+          className="min-w-0 flex-1 bg-transparent text-[14.5px] text-ink outline-none placeholder:text-faint"
+        />
+      </div>
 
+      {/* Filters */}
       <div className="mt-3 space-y-2">
-        <div className="flex gap-2 overflow-x-auto pb-1">
-          <GhostButton active={cat === "all"} onClick={() => setCat("all")}>
+        <div className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1">
+          <Chip active={cat === "all"} onClick={() => setCat("all")} className="whitespace-nowrap">
             Semua jenis
-          </GhostButton>
+          </Chip>
           {(Object.keys(CATEGORY_LABEL) as MenuCategory[]).map((c) => (
-            <GhostButton key={c} active={cat === c} onClick={() => setCat(c)} className="whitespace-nowrap">
+            <Chip
+              key={c}
+              active={cat === c}
+              onClick={() => setCat(c)}
+              className="whitespace-nowrap"
+            >
               {CATEGORY_LABEL[c]}
-            </GhostButton>
+            </Chip>
           ))}
         </div>
-        <div className="flex gap-2 overflow-x-auto pb-1">
-          <GhostButton active={cui === "all"} onClick={() => setCui("all")}>
-            Semua masakan
-          </GhostButton>
-          {(Object.keys(CUISINE_LABEL) as Cuisine[]).map((c) => (
-            <GhostButton key={c} active={cui === c} onClick={() => setCui(c)} className="whitespace-nowrap">
-              {CUISINE_LABEL[c]}
-            </GhostButton>
-          ))}
-        </div>
-        <div className="flex gap-2 overflow-x-auto pb-1">
-          <GhostButton active={pro === "all"} onClick={() => setPro("all")}>
+        <div className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1">
+          <Chip
+            active={pro === "all"}
+            variant="dark"
+            onClick={() => setPro("all")}
+            className="whitespace-nowrap"
+          >
             Semua protein
-          </GhostButton>
+          </Chip>
           {(Object.keys(PROTEIN_LABEL) as Protein[]).map((p) => (
-            <GhostButton key={p} active={pro === p} onClick={() => setPro(p)} className="whitespace-nowrap">
+            <Chip
+              key={p}
+              active={pro === p}
+              variant="dark"
+              onClick={() => setPro(p)}
+              className="whitespace-nowrap"
+            >
               {PROTEIN_LABEL[p]}
-            </GhostButton>
+            </Chip>
+          ))}
+        </div>
+        <div className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1">
+          <Chip active={cui === "all"} onClick={() => setCui("all")} className="whitespace-nowrap">
+            Semua masakan
+          </Chip>
+          {(Object.keys(CUISINE_LABEL) as Cuisine[]).map((c) => (
+            <Chip
+              key={c}
+              active={cui === c}
+              onClick={() => setCui(c)}
+              className="whitespace-nowrap"
+            >
+              {CUISINE_LABEL[c]}
+            </Chip>
           ))}
         </div>
       </div>
 
-      <div className="mt-3 text-xs text-stone-400">{results.length} menu ditemukan</div>
+      <div className="mt-3.5 text-xs font-semibold text-muted-2">
+        {results.length} menu ditemukan
+      </div>
 
-      <div className="mt-2 space-y-2 pb-2">
-        {results.map((m) => (
-          <Card key={m.id} className="p-3">
+      {/* 2-column photo grid */}
+      <div className="mt-2 grid grid-cols-2 gap-3">
+        {results.map((m) => {
+          const banned = store.isBanned(m.id);
+          const fav = store.isFavorite(m.id);
+          return (
             <button
+              key={m.id}
               type="button"
               onClick={() => navigate(`/menu/${m.id}`)}
-              className="flex w-full items-center gap-3 text-left"
+              className={`overflow-hidden rounded-[20px] border border-border bg-surface text-left shadow-card active:scale-[0.99] ${
+                banned ? "opacity-55" : ""
+              }`}
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-warm-100 text-2xl">
-                🍲
+              <div className="relative">
+                <Thumb
+                  photo={m.photo}
+                  veg={isVegCategory(m.category)}
+                  className="h-24 w-full"
+                  label="foto menu"
+                />
+                {m.spiceBase >= 2 && (
+                  <span className="absolute left-2 top-2 rounded-full bg-spicy-bg px-2 py-0.5 text-[10px] font-bold text-spicy-text">
+                    pedas
+                  </span>
+                )}
+                {banned ? (
+                  <span className="absolute right-2 top-2 flex h-[26px] w-[26px] items-center justify-center rounded-full bg-surface/90 text-muted">
+                    <BanIcon size={14} />
+                  </span>
+                ) : (
+                  fav && (
+                    <span className="absolute right-2 top-2 flex h-[26px] w-[26px] items-center justify-center rounded-full bg-surface/90 text-primary">
+                      <HeartIcon size={14} filled />
+                    </span>
+                  )
+                )}
               </div>
-              <div className="min-w-0 flex-1">
-                <div className="flex items-center gap-1.5">
-                  <span className="truncate font-semibold text-stone-800">{m.name}</span>
-                  {store.isFavorite(m.id) && <span>❤️</span>}
-                  {store.isBanned(m.id) && <span>🚫</span>}
-                </div>
-                <div className="text-xs text-stone-400">
-                  {CATEGORY_LABEL[m.category]} · {effortLabel(m.effortMinutes)} ·{" "}
-                  {PRICE_LABEL[m.priceTier]}
+              <div className="px-3 pb-3 pt-2.5">
+                <div className="text-[13.5px] font-bold leading-tight text-ink">{m.name}</div>
+                <div className="mt-1 text-[11px] text-muted-2">
+                  {effortLabel(m.effortMinutes)} · {PRICE_LABEL[m.priceTier]}
                 </div>
               </div>
-              {m.spiceBase >= 2 && <Tag tone="red">pedas</Tag>}
             </button>
-          </Card>
-        ))}
-        {results.length === 0 && (
-          <div className="rounded-2xl bg-warm-50 px-6 py-10 text-center text-sm text-stone-500">
-            Nggak ada menu yang cocok. Coba longgarkan filternya.
-          </div>
-        )}
+          );
+        })}
       </div>
+      {results.length === 0 && (
+        <div className="mt-2 rounded-3xl bg-tint px-6 py-10 text-center text-sm text-muted">
+          Nggak ada menu yang cocok. Coba longgarkan filternya.
+        </div>
+      )}
     </div>
   );
 }

@@ -15,7 +15,7 @@
   --color-border: #efe0c8; /* card border */
   --color-border-input: #e9d7bc; /* input / chip border */
   --color-divider: #f5ead6; /* inner divider */
-  --color-dashed: #dcc79f; /* dashed dividers / borders */
+  --color-line-dashed: #dcc79f; /* dashed dividers / borders */
 
   /* Brand */
   --color-primary: #b8502e; /* terracotta */

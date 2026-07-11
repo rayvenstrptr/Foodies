@@ -4,7 +4,14 @@ import { ingredientMode } from "../engine";
 import { canonicalIngredientName, searchIngredients } from "../data/ingredients";
 import { useStore } from "../lib/store";
 import { effortLabel, PRICE_LABEL } from "../lib/format";
-import { Card, EmptyState, Tag } from "../components/ui";
+import { EmptyState, isVegCategory, ScreenHeader, Thumb } from "../components/ui";
+import { SearchIcon } from "../components/icons";
+
+function matchColor(pct: number): string {
+  if (pct >= 85) return "bg-leaf";
+  if (pct >= 65) return "bg-match-mid";
+  return "bg-match-low";
+}
 
 export default function AdaBahan() {
   const store = useStore();
@@ -32,35 +39,37 @@ export default function AdaBahan() {
   const remove = (name: string) => setOwned(owned.filter((o) => o !== name));
 
   return (
-    <div className="px-4 pt-4">
-      <header className="mb-3">
-        <h1 className="text-2xl font-extrabold text-warm-800">Ada bahan apa?</h1>
-        <p className="text-sm text-stone-500">
-          Ketik bahan yang ada di kulkas/dapur. Kami carikan menu yang paling cocok dengan
-          stok kamu.
-        </p>
-      </header>
+    <div className="px-5 pt-5">
+      <ScreenHeader
+        kicker="Cek kulkas dulu 🧺"
+        title="Ada bahan apa?"
+        subtitle="Ketik bahan yang ada. Kami carikan menu yang paling cocok dengan stok kamu."
+      />
 
-      <div className="relative">
-        <input
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" && (suggestions[0] || query.trim())) {
-              add(suggestions[0]?.name ?? query);
-            }
-          }}
-          placeholder="Cari bahan… mis. ayam, kangkung, telur"
-          className="w-full rounded-2xl border border-warm-200 bg-white px-4 py-3 text-base outline-none focus:border-warm-500"
-        />
+      {/* Pill search */}
+      <div className="relative mt-3.5">
+        <div className="flex items-center gap-2.5 rounded-full border border-border-input bg-surface px-4.5 py-3.5">
+          <SearchIcon size={18} className="shrink-0 text-faint" />
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && (suggestions[0] || query.trim())) {
+                add(suggestions[0]?.name ?? query);
+              }
+            }}
+            placeholder="Cari bahan… mis. ayam, kangkung"
+            className="min-w-0 flex-1 bg-transparent text-[14.5px] text-ink outline-none placeholder:text-faint"
+          />
+        </div>
         {suggestions.length > 0 && (
-          <div className="absolute z-10 mt-1 w-full overflow-hidden rounded-2xl border border-warm-100 bg-white shadow-lg">
+          <div className="absolute z-10 mt-1 w-full overflow-hidden rounded-2xl border border-border bg-surface shadow-nav">
             {suggestions.map((s) => (
               <button
                 key={s.name}
                 type="button"
                 onClick={() => add(s.name)}
-                className="block w-full px-4 py-2.5 text-left text-sm hover:bg-warm-50"
+                className="block w-full px-4 py-2.5 text-left text-sm text-ink hover:bg-tint"
               >
                 {s.name}
               </button>
@@ -76,7 +85,7 @@ export default function AdaBahan() {
               key={name}
               type="button"
               onClick={() => remove(name)}
-              className="rounded-full bg-warm-100 px-3 py-1.5 text-sm font-medium text-warm-800 active:scale-95"
+              className="rounded-full bg-dark px-3.5 py-2 text-[13px] font-bold text-page active:scale-95"
             >
               {name} ✕
             </button>
@@ -94,38 +103,56 @@ export default function AdaBahan() {
             Coba tambah bahan lain seperti protein atau sayuran.
           </EmptyState>
         ) : (
-          <div className="space-y-3">
-            {results.map((r) => {
-              const pct = Math.round(r.coverage * 100);
-              return (
-                <Card key={r.menu.id} className="p-4">
+          <>
+            <div className="text-base font-extrabold text-ink">Paling cocok sama stokmu</div>
+            <div className="mt-2.5 flex flex-col gap-3">
+              {results.map((r) => {
+                const pct = Math.round(r.coverage * 100);
+                return (
                   <button
+                    key={r.menu.id}
                     type="button"
                     onClick={() => navigate(`/menu/${r.menu.id}`)}
-                    className="block w-full text-left"
+                    className="flex gap-3.5 rounded-3xl border border-border bg-surface p-3.5 text-left shadow-card active:scale-[0.99]"
                   >
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="font-semibold text-stone-800">{r.menu.name}</span>
-                      <Tag tone={pct >= 70 ? "leaf" : "warm"}>Bahan cukup {pct}%</Tag>
-                    </div>
-                    <div className="mt-1 text-xs text-stone-400">
-                      {effortLabel(r.menu.effortMinutes)} · {PRICE_LABEL[r.menu.priceTier]}
-                    </div>
-                    {r.missing.length > 0 ? (
-                      <div className="mt-1.5 text-sm text-stone-600">
-                        Tinggal beli: {r.missing.slice(0, 5).join(", ")}
-                        {r.missing.length > 5 ? `, +${r.missing.length - 5} lagi` : ""}.
+                    <Thumb
+                      photo={r.menu.photo}
+                      veg={isVegCategory(r.menu.category)}
+                      className="h-16 w-16 shrink-0 rounded-2xl"
+                    />
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="truncate text-[15.5px] font-bold text-ink">
+                          {r.menu.name}
+                        </span>
+                        <span
+                          className={`shrink-0 rounded-full px-2.5 py-0.5 text-[11px] font-extrabold text-white ${matchColor(pct)}`}
+                        >
+                          {pct}%
+                        </span>
                       </div>
-                    ) : (
-                      <div className="mt-1.5 text-sm font-medium text-green-700">
-                        Semua bahan (non-pokok) sudah ada! 🎉
+                      <div className="mt-0.5 text-xs text-muted-2">
+                        {effortLabel(r.menu.effortMinutes)} · {PRICE_LABEL[r.menu.priceTier]}
                       </div>
-                    )}
+                      {r.missing.length > 0 ? (
+                        <div className="mt-1.5 text-[13px] text-ink-2">
+                          Tinggal beli:{" "}
+                          <b className="font-bold">
+                            {r.missing.slice(0, 5).join(", ")}
+                            {r.missing.length > 5 ? `, +${r.missing.length - 5} lagi` : ""}
+                          </b>
+                        </div>
+                      ) : (
+                        <div className="mt-1.5 text-[13px] font-bold text-leaf">
+                          Semua bahan sudah ada! 🎉
+                        </div>
+                      )}
+                    </div>
                   </button>
-                </Card>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          </>
         )}
       </div>
     </div>

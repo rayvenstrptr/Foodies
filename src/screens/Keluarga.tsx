@@ -2,23 +2,27 @@ import { useState } from "react";
 import type { AgeGroup, Household, Member, SpiceLevel } from "../data/types";
 import { canonicalIngredientName } from "../data/ingredients";
 import { useStore } from "../lib/store";
-import { Card, GhostButton, SectionTitle, Stepper } from "../components/ui";
+import { Card, Chip, ScreenHeader, SectionTitle, Stepper } from "../components/ui";
 
 const AGE_LABEL: Record<AgeGroup, string> = {
   anak: "Anak",
   dewasa: "Dewasa",
   lansia: "Lansia"
 };
-const SPICE_LABEL = ["Nggak pedas", "Sedikit", "Sedang", "Pedas"];
+const SPICE_WORD = ["nggak pedas", "tahan pedas sedikit", "tahan pedas sedang", "tahan pedas tinggi"];
 
 function ChipInput({
   label,
+  hint,
   placeholder,
+  tone,
   values,
   onChange
 }: {
   label: string;
+  hint: string;
   placeholder: string;
+  tone: "spicy" | "warm";
   values: string[];
   onChange: (v: string[]) => void;
 }) {
@@ -28,36 +32,31 @@ function ChipInput({
     if (canon && !values.includes(canon)) onChange([...values, canon]);
     setText("");
   };
+  const chipTone = tone === "spicy" ? "bg-spicy-bg text-spicy-text" : "bg-thumb text-ink-2";
   return (
     <div>
-      <div className="mb-1 text-xs font-semibold text-stone-500">{label}</div>
-      <div className="flex flex-wrap gap-1.5">
+      <div className="mb-1.5 text-[11.5px] font-bold text-muted">
+        {label} <span className="font-semibold text-faint">· {hint}</span>
+      </div>
+      <div className="flex flex-wrap items-center gap-1.5">
         {values.map((v) => (
           <button
             key={v}
             type="button"
             onClick={() => onChange(values.filter((x) => x !== v))}
-            className="rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700 active:scale-95"
+            className={`rounded-full px-2.5 py-1 text-xs font-bold active:scale-95 ${chipTone}`}
           >
             {v} ✕
           </button>
         ))}
-      </div>
-      <div className="mt-1.5 flex gap-2">
         <input
           value={text}
           onChange={(e) => setText(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && add()}
+          onBlur={add}
           placeholder={placeholder}
-          className="min-w-0 flex-1 rounded-xl border border-warm-200 px-3 py-2 text-sm outline-none focus:border-warm-500"
+          className="w-28 rounded-full border-[1.5px] border-dashed border-line-dashed bg-transparent px-3 py-1 text-xs font-bold text-ink-2 outline-none placeholder:text-faint-2"
         />
-        <button
-          type="button"
-          onClick={add}
-          className="rounded-xl bg-warm-100 px-3 text-sm font-semibold text-warm-700"
-        >
-          Tambah
-        </button>
       </div>
     </div>
   );
@@ -92,75 +91,84 @@ export default function Keluarga() {
     store.updateMembers(household.members.filter((_, i) => i !== index));
 
   return (
-    <div className="px-4 pt-4">
-      <header className="mb-2">
-        <h1 className="text-2xl font-extrabold text-warm-800">Keluarga</h1>
-        <p className="text-sm text-stone-500">
-          Isi seperlunya aja. Alergi jadi filter wajib; nggak-suka cuma bikin menu itu jarang
-          muncul. Semua opsional.
-        </p>
-      </header>
+    <div className="px-5 pt-5">
+      <ScreenHeader
+        kicker="Preferensi rumah 👪"
+        title="Keluarga"
+        subtitle="Alergi jadi filter wajib; nggak-suka cuma bikin menu itu jarang muncul. Semua opsional."
+      />
 
-      <SectionTitle>Anggota</SectionTitle>
-      <div className="space-y-3">
+      <SectionTitle className="mb-2 mt-5">Anggota</SectionTitle>
+      <div className="space-y-3.5">
         {household.members.map((m, i) => (
-          <Card key={i} className="space-y-3 p-4">
-            <div className="flex items-center gap-2">
-              <input
-                value={m.name}
-                onChange={(e) => setMember(i, { name: e.target.value })}
-                className="min-w-0 flex-1 rounded-xl border border-warm-200 px-3 py-2 font-semibold outline-none focus:border-warm-500"
-              />
+          <Card key={i} className="space-y-3.5 p-4">
+            <div className="flex items-center gap-3">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-thumb text-base font-extrabold text-muted">
+                {m.name.trim()[0]?.toUpperCase() ?? "?"}
+              </span>
+              <div className="min-w-0 flex-1">
+                <input
+                  value={m.name}
+                  onChange={(e) => setMember(i, { name: e.target.value })}
+                  className="w-full bg-transparent text-base font-extrabold text-ink outline-none"
+                  aria-label="nama anggota"
+                />
+                <div className="text-xs text-muted-2">
+                  {AGE_LABEL[m.ageGroup]} · {SPICE_WORD[m.spiceTolerance]}
+                </div>
+              </div>
               <button
                 type="button"
                 onClick={() => removeMember(i)}
-                className="rounded-xl bg-red-50 px-3 py-2 text-sm font-semibold text-red-600"
+                className="shrink-0 text-[12.5px] font-bold text-primary active:scale-95"
               >
                 Hapus
               </button>
             </div>
 
             <div>
-              <div className="mb-1 text-xs font-semibold text-stone-500">Umur</div>
+              <div className="mb-1.5 text-[11.5px] font-bold text-muted">Umur</div>
               <div className="flex gap-2">
                 {(Object.keys(AGE_LABEL) as AgeGroup[]).map((ag) => (
-                  <GhostButton
+                  <Chip
                     key={ag}
                     active={m.ageGroup === ag}
                     onClick={() => setMember(i, { ageGroup: ag })}
                   >
                     {AGE_LABEL[ag]}
-                  </GhostButton>
+                  </Chip>
                 ))}
               </div>
             </div>
 
             <div>
-              <div className="mb-1 text-xs font-semibold text-stone-500">
-                Tahan pedas: {SPICE_LABEL[m.spiceTolerance]}
-              </div>
+              <div className="mb-1.5 text-[11.5px] font-bold text-muted">Tahan pedas</div>
               <div className="flex gap-2">
                 {[0, 1, 2, 3].map((lvl) => (
-                  <GhostButton
+                  <Chip
                     key={lvl}
                     active={m.spiceTolerance === lvl}
                     onClick={() => setMember(i, { spiceTolerance: lvl as SpiceLevel })}
                   >
                     {"🌶️".repeat(lvl) || "🚫"}
-                  </GhostButton>
+                  </Chip>
                 ))}
               </div>
             </div>
 
             <ChipInput
-              label="Alergi (filter wajib)"
-              placeholder="mis. udang, telur"
+              label="Alergi"
+              hint="filter wajib"
+              placeholder="＋ Tambah"
+              tone="spicy"
               values={m.allergies}
               onChange={(v) => setMember(i, { allergies: v })}
             />
             <ChipInput
-              label="Nggak suka (pengurang skor)"
-              placeholder="mis. pare, jengkol"
+              label="Nggak suka"
+              hint="jarang muncul"
+              placeholder="＋ Tambah"
+              tone="warm"
               values={m.dislikes}
               onChange={(v) => setMember(i, { dislikes: v })}
             />
@@ -171,15 +179,15 @@ export default function Keluarga() {
       <button
         type="button"
         onClick={addMember}
-        className="mt-3 w-full rounded-2xl border-2 border-dashed border-warm-300 py-3 text-sm font-semibold text-warm-600 active:scale-[0.99]"
+        className="mt-3 w-full rounded-3xl border-2 border-dashed border-line-dashed py-3.5 text-center text-[13.5px] font-extrabold text-primary active:scale-[0.99]"
       >
-        + Tambah anggota
+        ＋ Tambah anggota
       </button>
 
-      <SectionTitle>Pengaturan Masak</SectionTitle>
+      <SectionTitle className="mb-2 mt-5.5">Pengaturan Masak</SectionTitle>
       <Card className="space-y-4 p-4">
         <div className="flex items-center justify-between">
-          <span className="text-sm text-stone-600">Porsi default</span>
+          <span className="text-sm font-semibold text-ink-2">Porsi default</span>
           <Stepper
             value={household.defaultServings}
             min={1}
@@ -189,33 +197,33 @@ export default function Keluarga() {
         </div>
 
         <div>
-          <div className="mb-1 text-sm text-stone-600">Jumlah lauk per makan</div>
+          <div className="mb-1.5 text-sm font-semibold text-ink-2">Jumlah lauk per makan</div>
           <div className="flex gap-2">
             {[2, 3, 4].map((n) => (
-              <GhostButton
+              <Chip
                 key={n}
                 active={household.dishesPerMeal === n}
                 onClick={() => update({ dishesPerMeal: n as 2 | 3 | 4 })}
               >
                 {n === 2 ? "2 · lauk+sayur" : n === 3 ? "3 · +pelengkap" : "4 · +sup"}
-              </GhostButton>
+              </Chip>
             ))}
           </div>
         </div>
 
         <div>
-          <div className="mb-1 text-sm text-stone-600">
-            Batas waktu masak hari kerja: {household.weekdayEffortCapMinutes} menit
+          <div className="mb-1.5 text-sm font-semibold text-ink-2">
+            Batas waktu masak hari kerja
           </div>
           <div className="flex flex-wrap gap-2">
             {[30, 45, 60, 90].map((cap) => (
-              <GhostButton
+              <Chip
                 key={cap}
                 active={household.weekdayEffortCapMinutes === cap}
                 onClick={() => update({ weekdayEffortCapMinutes: cap })}
               >
-                {cap} menit
-              </GhostButton>
+                {cap}'
+              </Chip>
             ))}
           </div>
         </div>
@@ -226,7 +234,7 @@ export default function Keluarga() {
         onClick={() => {
           if (confirm("Reset semua data (keluarga, favorit, riwayat)?")) store.resetAll();
         }}
-        className="mt-5 mb-2 w-full rounded-2xl bg-stone-100 py-2.5 text-sm font-medium text-stone-500"
+        className="mx-auto mt-5 mb-1 block text-[13px] font-semibold text-faint underline"
       >
         Reset semua data
       </button>
