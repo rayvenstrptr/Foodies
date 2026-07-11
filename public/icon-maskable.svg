@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- full-bleed background for maskable safe zone -->
+  <rect width="64" height="64" fill="#b45309"/>
+  <!-- content kept within the central safe zone -->
+  <g transform="translate(6 6) scale(0.8125)">
+    <path d="M12 34h40c0 9-7 16-16 17v3h-8v-3c-9-1-16-8-16-17z" fill="#fffbeb"/>
+    <ellipse cx="32" cy="34" rx="20" ry="4" fill="#fde68a"/>
+    <path d="M24 24c0-4 4-4 4-8" stroke="#fffbeb" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M32 22c0-4 4-4 4-8" stroke="#fffbeb" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M40 24c0-4 4-4 4-8" stroke="#fffbeb" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

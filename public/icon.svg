@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#b45309"/>
+  <!-- rice bowl -->
+  <path d="M12 34h40c0 9-7 16-16 17v3h-8v-3c-9-1-16-8-16-17z" fill="#fffbeb"/>
+  <ellipse cx="32" cy="34" rx="20" ry="4" fill="#fde68a"/>
+  <!-- steam -->
+  <path d="M24 24c0-4 4-4 4-8" stroke="#fffbeb" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M32 22c0-4 4-4 4-8" stroke="#fffbeb" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M40 24c0-4 4-4 4-8" stroke="#fffbeb" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>
